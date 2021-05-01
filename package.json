@@ -1,0 +1,34 @@
+{
+  "name": "eu-signer-verifier",
+  "version": "0.0.1",
+  "description": "Signer and Verifier of EU's Verifiable Credentials",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "author": "Vitor Pamplona",
+  "license": "MIT",
+  "dependencies": {
+    "@fidm/asn1": "^1.0",
+    "@fidm/x509": "^1.2.1",
+    "aes-ccm": "^1.0.12",
+    "assert": "^2.0.0",
+    "base45-js": "^1.0",
+    "cbor": "^7.0.4",
+    "cose-js": "^0.4",
+    "hi-base32": "^0.5.0",
+    "node-inspect-extracted": "^1.0.5",
+    "pako": "^2.0",
+    "process": "^0.11.10",
+    "readable-stream": "^3.6.0",
+    "sha256-uint8array": "^0.10.0",
+    "stream-browserify": "^3.0.0",
+    "uint8-to-base64": "^0.2.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^4.6.0"
+  }
+}

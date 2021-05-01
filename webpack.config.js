@@ -6,12 +6,13 @@ module.exports = {
   entry: "./lib/index.js",
   devtool: "source-map",
   output: {
-    filename: 'eu.min.js',
+    filename: 'eudgc.sdk.min.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'EU',
+    library: 'EUGDC',
     libraryTarget: 'umd',
   },
   target: 'web',
+
   optimization: {
     minimize: false
   },

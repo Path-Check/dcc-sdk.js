@@ -38,8 +38,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/eu.min.js
-          asset_name: eu.min.js
+          asset_path: ./dist/eudgc.sdk.min.js
+          asset_name: eudgc.sdk.min.js
           asset_content_type: application/zip
 
 

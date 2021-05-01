@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: 'eudgc.sdk.min.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'EUGDC',
+    library: 'EUDGC',
     libraryTarget: 'umd',
   },
   target: 'web',

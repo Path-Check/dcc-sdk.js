@@ -1,7 +1,7 @@
 {
   "name": "eu-signer-verifier",
   "version": "0.0.1",
-  "description": "Signer and Verifier of EU's Verifiable Credentials",
+  "description": "Verifiable QR SDK for EU Digital Green Certificates",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",

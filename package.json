@@ -1,6 +1,6 @@
 {
   "name": "eu-signer-verifier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Verifiable QR SDK for EU Digital Green Certificates",
   "main": "lib/index.js",
   "scripts": {

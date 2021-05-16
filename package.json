@@ -1,6 +1,6 @@
 {
   "name": "eugdc-sdk",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Verifiable QR SDK for EU Digital Green Certificates",
   "main": "lib/index.js",
   "scripts": {

@@ -8,7 +8,7 @@
     "webpack": "webpack --config webpack.config.js"
   },
   "author": "Vitor Pamplona",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "dependencies": {
     "@fidm/asn1": "^1.0",
     "@fidm/x509": "^1.2.1",

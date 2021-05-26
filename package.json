@@ -10,24 +10,19 @@
   "author": "Vitor Pamplona",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@fidm/asn1": "^1.0",
     "@fidm/x509": "^1.2.1",
-    "aes-ccm": "^1.0.12",
-    "assert": "^2.0.0",
+    "base32url": "^0.0.4",
     "base45-js": "^1.0",
     "cbor": "^7.0.4",
     "cose-js": "^0.4",
-    "hi-base32": "^0.5.0",
-    "node-inspect-extracted": "^1.0.5",
+    "node-inspect-extracted": "^1.0.7",
     "pako": "^2.0",
-    "process": "^0.11.10",
-    "readable-stream": "^3.6.0",
-    "sha256-uint8array": "^0.10.0",
-    "stream-browserify": "^3.0.0",
-    "uint8-to-base64": "^0.2.0"
+    "sha256-uint8array": "^0.10.0"
   },
   "devDependencies": {
+    "assert": "^2.0.0",
     "jest": "^26.6.3",
+    "process": "^0.11.10",
     "webpack": "^4.44.1",
     "webpack-cli": "^4.6.0"
   }

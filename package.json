@@ -1,5 +1,5 @@
 {
-  "name": "eugdc-sdk",
+  "name": "@pathcheck/eugdc-sdk",
   "version": "0.0.8",
   "description": "Verifiable QR SDK for EU Digital Green Certificates",
   "main": "lib/index.js",

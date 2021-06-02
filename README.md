@@ -1,6 +1,6 @@
-# Verifiable QR SDK for EU Digital Green Certificates
+# Verifiable QR SDK for EU Digital Covid Certificates
 
-JavaScript Implementation of [EU's Digital Green Certificates](https://ec.europa.eu/info/live-work-travel-eu/coronavirus-response/safe-covid-19-vaccines-europeans/covid-19-digital-green-certificates_en), a CBOR/COSE-based Verifiable QR Credentials. 
+JavaScript Implementation of [EU's Digital Covid Certificates](https://ec.europa.eu/info/live-work-travel-eu/coronavirus-response/safe-covid-19-vaccines-europeans/covid-19-digital-green-certificates_en), a CBOR/COSE-based Verifiable QR Credentials. 
 
 # Install
 

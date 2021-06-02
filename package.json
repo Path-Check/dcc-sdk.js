@@ -1,7 +1,7 @@
 {
   "name": "@pathcheck/eugdc-sdk",
   "version": "0.0.8",
-  "description": "Verifiable QR SDK for EU Digital Green Certificates",
+  "description": "Verifiable QR SDK for EU Digital Covid Certificates",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",

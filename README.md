@@ -5,7 +5,7 @@ JavaScript Implementation of [EU's Digital Covid Certificates](https://ec.europa
 # Install
 
 ```sh
-npm install eudgc.sdk --save
+npm install @pathcheck/dcc-sdk --save
 ```
 
 # Setting up CSCA, DCS and Key IDs

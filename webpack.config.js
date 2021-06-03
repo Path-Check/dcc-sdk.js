@@ -3,12 +3,12 @@ const webpack = require('webpack')
 
 module.exports = {
   mode: "production",
-  entry: "./lib/index.js",
+  entry: "./lib/main.js",
   devtool: "source-map",
   output: {
-    filename: 'eudgc.sdk.min.js',
+    filename: 'dcc-sdk.min.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'EUDGC',
+    library: 'DCC',
     libraryTarget: 'umd',
   },
   target: 'web',

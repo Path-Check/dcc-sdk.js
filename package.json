@@ -24,7 +24,7 @@
     "base45-js": "^1.0",
     "base64-js": "~1.5.1",
     "cbor": "^7.0.4",
-    "cose-js": "^0.4",
+    "cose-js": "^0.6.0",
     "esm": "^3.2.25",
     "node-inspect-extracted": "^1.0.7",
     "pako": "^2.0",

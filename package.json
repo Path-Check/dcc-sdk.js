@@ -5,6 +5,7 @@
   "private": false,
   "main": "lib/index.js",
   "module": "lib/main.js",
+  "react-native": "lib/main.js",
   "scripts": {
     "test": "mocha",
     "webpack": "webpack --config webpack.config.js"

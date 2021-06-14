@@ -17,6 +17,10 @@
   "bugs": {
     "url": "https://github.com/Path-Check/dcc-sdk.js/issues"
   },
+  "files": [
+    "lib/**/*.js",
+    "scripts/**/*.js"
+  ],
   "author": "Vitor Pamplona",
   "license": "GPL-3.0-only",
   "dependencies": {

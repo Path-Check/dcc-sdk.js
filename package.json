@@ -35,7 +35,6 @@
     "cbor": "^7.0.4",
     "elliptic": "^6.4.0",
     "esm": "^3.2.25",
-    "node-fetch": "^2.6.1",
     "node-inspect-extracted": "^1.0.7",
     "pako": "^2.0",
     "sha256-uint8array": "^0.10.0"

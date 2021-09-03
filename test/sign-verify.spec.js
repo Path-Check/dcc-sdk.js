@@ -1,5 +1,10 @@
-const {sign, verify, pack, unpack, signAndPack, unpackAndVerify, signAndPack32, signAndPack45, makeCWT, parseCWT, debug} = require('../lib/index');
+const {sign, verify, pack, unpack, signAndPack, unpackAndVerify, signAndPack32, signAndPack45, makeCWT, parseCWT, debug, addCachedCerts, addCachedKeys} = require('../lib/index');
 const expect = require('chai').expect; 
+
+const {CERT_TEST_LIST, PUBKEY_TEST_LIST} = require('./resolver.test.js');
+
+addCachedCerts(CERT_TEST_LIST);
+addCachedKeys(PUBKEY_TEST_LIST);
 
 const PUBLIC_KEY_PEM = '-----BEGIN CERTIFICATE-----\nMIIBYDCCAQYCEQCAG8uscdLb0ppaneNN5sB7MAoGCCqGSM49BAMCMDIxIzAhBgNV\nBAMMGk5hdGlvbmFsIENTQ0Egb2YgRnJpZXNsYW5kMQswCQYDVQQGEwJGUjAeFw0y\nMTA0MjcyMDQ3MDVaFw0yNjAzMTIyMDQ3MDVaMDYxJzAlBgNVBAMMHkRTQyBudW1i\nZXIgd29ya2VyIG9mIEZyaWVzbGFuZDELMAkGA1UEBhMCRlIwWTATBgcqhkjOPQIB\nBggqhkjOPQMBBwNCAARkJeqyO85dyR+UrQ5Ey8EdgLyf9NtsCrwORAj6T68/elL1\n9aoISQDbzaNYJjdD77XdHtd+nFGTQVpB88wPTwgbMAoGCCqGSM49BAMCA0gAMEUC\nIQDvDacGFQO3tuATpoqf40CBv09nfglL3wh5wBwA1uA7lAIgZ4sOK2iaaTsFNqEN\nAF7zi+d862ePRQ9Lwymr7XfwVm0=\n-----END CERTIFICATE-----';
 const PRIVATE_KEY_P8 = '-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgZgp3uylFeCIIXozb\nZkCkSNr4DcLDxplZ1ax/u7ndXqahRANCAARkJeqyO85dyR+UrQ5Ey8EdgLyf9Nts\nCrwORAj6T68/elL19aoISQDbzaNYJjdD77XdHtd+nFGTQVpB88wPTwgb\n-----END PRIVATE KEY-----';
@@ -173,4 +178,56 @@ describe('EU DCC', function() {
     expect(JSON.stringify(cbor, replacer)).to.eql(ExpectedStringified);
   });
 
+  /* Not ready for Uruguay yet
+  it.only('should Unpack Everything from Uruguay', async () => {
+    // Signed by the original EU source.  They encoded the JSON as a String
+    const signed = 'HC1:NCFOXNYTSFDHJI8Y0PQ8KGXMDVJ S3U 22ZMC C3.1K P/X9I-LOGID-QOXS-RI3VCD+SL89$66Z-AAKPB-5R$9$J5IHLM69KOMJI6ICM5DMORQ7N1Y.I%*48Z2YU4Z0QMX1$R1$%PDLDEQ5LHP063FGPS-MF4KU885 8AGOZ1LR$BD4CCMR2:Q7OA29N9GS%.64891YIWB3X8QVHNCNDYTKC4A1LEE5RJAOL/I*A1I7O4QMUPA.+3PVS.D6:L7*3U*Q5DKI%JOL8PQDSV4FBZR7+C* 4BBI:HKFPUO0ONWR/.98A7O7P00L*.U0COKJ5JJ5LRJXP9BHU7V38OF4ET6HES MF1EGJMWE4CU5CEJJ%TY15JTV *4NRFOVUOA7XC0WWND1EK3JSCM4:OGY4RVT+ 9J.AZ26:PK.YGO1MUGB.-VZXCVWCECEUTSEEF29TAHIH0QXCNRT6M.SAN1B.61.J*YP47MPAB*WAP2WST6*HTJ*MOK2Y6EYSLQZ9ABMBLPXR25QV%F0NXT2ML%/FA13 5VG9ALJVETPN/MRSG NCW30BYQ14';
+    const cbor = await debug(signed);
+    
+    const ExpectedStringified = '{"tag":18,"value":[{"dataType":"Map","value":[[1,-37],[4,"_itDQezTCKY"]]},{},{"dataType":"Map","value":[[1,"Saluduy"],[4,1630113292],[6,1627521292],[99,"{\\"DocumentType\\":\\"68909\\",\\"DocumentNumber\\":\\"17706166\\"}"],["98","{\\"DocumentType\\":\\"68909\\",\\"DocumentNumber\\":\\"17706166\\"}"]]},"Kr0fDcBs0RJRdoK2ivPqrLvVMrJ2iygR1QYPWSxkumgj52kLcHw/W9uStMGaoP2FOTBgG/sYakNlQuK+CFQ0jsOWz5oBFM9Tesbz377LttGmvpPAGagreOhHcfapCQ6cZMYglsFPL9LqU9UL7PiltA16xTLuTk+I0DV9nWfGthQsBPYDNj6TYNr8Nhwt15PNnGwQjLvVsPZmQK9kMwReevPZKoVI9J5bFhIq1xo6DPsZAbI9IMLR5p6onPwchW7RplVadMvoD4YzuUWmX9ZYOdkkDfximnLkGxvkC0sL1ak0bdf8beJUs9ygGddiZY9OCtBuvOAn0fh6MusdQEpBhg=="]}';
+    expect(JSON.stringify(cbor, replacer)).to.eql(ExpectedStringified);
+
+    const result = await unpackAndVerify(signed);
+    expect(result).to.eql(TEST_PAYLOAD);
+    expect(signed.length).to.eql(635);
+  });
+  */
+
+  it('should Unpack, Debug and Verify UK Certs', async () => {
+    const UK_PAYLOAD = 
+      {
+        v: [
+          {
+            ci: 'URN:UVCI:01:GB:1628590888416QZII4I7Q#L',
+            co: 'GB',
+            dn: 1,
+            dt: '2020-12-05',
+            is: 'NHS Digital',
+            ma: 'ORG-100030215',
+            mp: 'EU/1/20/1528',
+            sd: 2,
+            tg: '840539006',
+            vp: '1119349007'
+          }
+        ],
+        dob: '1918-06-28',
+        nam: { fn: 'GANTES', gn: 'EVAN', fnt: 'GANTES', gnt: 'EVAN' },
+        ver: '1.3.0'
+      }; 
+
+    // Signed by the original EU source.  They encoded the JSON as a String
+    const signed = 'HC1:6BFOXN TSMAHN-H1.OG:MR8EK*ORX4QF9W*9OJAU/ILCFHXKN*GMW6SA3/-2E%5VR5VVBJZI+EBXZ2G*S2U2V8TQEDK8C23T6VC-8D2VCGKDD8C:DC$JCVZ2.2TGHD0DD:FLPTI WJUQ6395R4I-B5ET42HP9EPXCRH99JDOAC5K87H8Q-9BSV40 7+P4Z.4:/6N9R%EPXCROGO3HOWGOKEQEC5L64HX6IAS3DS2980IQODPUHLO$GAHLW 70SO:GOLIROGO3T59YLLYP-HQLTQ9R0+L69/9-3AKI6$T6LEQY76LZ68999Q9E$BDZI69J59U*03HG3LZI29J1I38IT ZJ::A5V2F/9MM50CH7*KB*KYQTKWT4S86FP8-RV3JVWFOMUICHL26WUNPYRRW0TH59KEBW0PSB%D5PJPV:8GOFIUKS:F1IK5CO $DXF152S4:UFH1XL1YQMKCEEONC5I3DLIC2E$K:6D';
+    
+    const cbor = await debug(signed);
+    
+    const ExpectedStringified = '{"tag":18,"value":[{"dataType":"Map","value":[[1,-7],[4,"S2V5MQ=="]]},{},{"dataType":"Map","value":[[1,"GB"],[4,1631182860],[6,1628590888],[-260,{"dataType":"Map","value":[[1,{"v":[{"ci":"URN:UVCI:01:GB:1628590888416QZII4I7Q#L","co":"GB","dn":1,"dt":"2020-12-05","is":"NHS Digital","ma":"ORG-100030215","mp":"EU/1/20/1528","sd":2,"tg":"840539006","vp":"1119349007"}],"dob":"1918-06-28","nam":{"fn":"GANTES","gn":"EVAN","fnt":"GANTES","gnt":"EVAN"},"ver":"1.3.0"}]]}]]},"HSjYKxxJ5jjkEgyOZPc6hrKgunmVCxpTJNBUcfkInChbveJoj08S+vsPPIxxO0eHLsESjxNFBUQJutqeDhKCkg=="]}';
+    expect(JSON.stringify(cbor, replacer)).to.eql(ExpectedStringified);
+
+    const result = await unpackAndVerify(signed);
+    expect(await parseCWT(result)).to.eql(UK_PAYLOAD);
+  });
+
 });
+
+
+

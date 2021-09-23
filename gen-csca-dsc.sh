@@ -6,7 +6,7 @@ set -e
 
 OPENSSL=${OPENSSL:=openssl}
 
-${OPENSSL} ecparam -name prime256v1 -genkey -noout -out csca.key
+${OPENSSL} genrsa -out csca.key 2048 # ecparam -name prime256v1 -genkey -noout -out csca.key
 ${OPENSSL} req -x509 \
 	-subj '/CN=National CSCA of Friesland/C=FR/' \
 	-key csca.key \
@@ -17,7 +17,7 @@ ${OPENSSL} req -x509 \
 for i in 1 2 3 4 worker
 do
 R=$( ${OPENSSL} rand -hex 16 )
-${OPENSSL} ecparam -name prime256v1 -genkey -noout -out dsc-$i.key
+${OPENSSL} genrsa -out dsc-$i.key 2048 # ecparam -name prime256v1 -genkey -noout -out dsc-$i.key
 ${OPENSSL} req -new \
 	-subj "/CN=DSC number $i of Friesland/C=FR/" \
 	-key dsc-$i.key -nodes |

@@ -1,4 +1,4 @@
-const {sign, verify, pack, unpack, signAndPack, unpackAndVerify, signAndPack32, signAndPack45, makeCWT, parseCWT, debug, addCachedCerts, addCachedKeys} = require('../lib/index');
+const {sign, verify, pack, unpack, signAndPack, unpackAndVerify, makeCWT, parseCWT, debug, addCachedCerts, addCachedKeys} = require('../lib/index');
 const expect = require('chai').expect; 
 
 const {CERT_TEST_LIST, PUBKEY_TEST_LIST} = require('./resolver.test.js');

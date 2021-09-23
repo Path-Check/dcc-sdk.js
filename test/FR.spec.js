@@ -1,4 +1,4 @@
-const {sign, verify, pack, unpack, signAndPack, unpackAndVerify, signAndPack32, signAndPack45, makeCWT, parseCWT, debug} = require('../lib/index');const expect = require('chai').expect; 
+const {sign, verify, pack, unpack, signAndPack, unpackAndVerify, makeCWT, parseCWT, debug} = require('../lib/index');const expect = require('chai').expect; 
 
 describe('FR', async () => {
   it('should verify FR_2DCode_raw_test_pcr_ok', async () => {

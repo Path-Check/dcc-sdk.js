@@ -9,6 +9,55 @@ addCachedKeys(PUBKEY_TEST_LIST);
 const PUBLIC_KEY_PEM = '-----BEGIN CERTIFICATE-----\nMIIBYDCCAQYCEQCAG8uscdLb0ppaneNN5sB7MAoGCCqGSM49BAMCMDIxIzAhBgNV\nBAMMGk5hdGlvbmFsIENTQ0Egb2YgRnJpZXNsYW5kMQswCQYDVQQGEwJGUjAeFw0y\nMTA0MjcyMDQ3MDVaFw0yNjAzMTIyMDQ3MDVaMDYxJzAlBgNVBAMMHkRTQyBudW1i\nZXIgd29ya2VyIG9mIEZyaWVzbGFuZDELMAkGA1UEBhMCRlIwWTATBgcqhkjOPQIB\nBggqhkjOPQMBBwNCAARkJeqyO85dyR+UrQ5Ey8EdgLyf9NtsCrwORAj6T68/elL1\n9aoISQDbzaNYJjdD77XdHtd+nFGTQVpB88wPTwgbMAoGCCqGSM49BAMCA0gAMEUC\nIQDvDacGFQO3tuATpoqf40CBv09nfglL3wh5wBwA1uA7lAIgZ4sOK2iaaTsFNqEN\nAF7zi+d862ePRQ9Lwymr7XfwVm0=\n-----END CERTIFICATE-----';
 const PRIVATE_KEY_P8 = '-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgZgp3uylFeCIIXozb\nZkCkSNr4DcLDxplZ1ax/u7ndXqahRANCAARkJeqyO85dyR+UrQ5Ey8EdgLyf9Nts\nCrwORAj6T68/elL19aoISQDbzaNYJjdD77XdHtd+nFGTQVpB88wPTwgb\n-----END PRIVATE KEY-----';
 
+const PRIVATE_RSA_KEY_P8 = `-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDbL7MgJd46/F48
+S5sQLOKN+I/iuCuHJbYVwdt8oNk3KkhtuYoUWisW9jb4OpSOxZ1qfU0brJBv+8yM
+StQdlE2HG8jyozhS3S5irRAIEzd0/O22HJnkROnvMuAJY6E1uzK2tWwDS1XylVMr
+EvAKPtw7PThHTwDoOAJdd5bjiIQRnJW5oLdlzo5WTcm2wI1DL+x7k4+kL9X+Woet
+dP/y21zFs0jgmg9FqA9yTIbI1BWI4Vf/oFaWVSojGokolXdQge6EBWZum0J4oCoA
+LrfAS9hQzhaDzT4CnutR3xC97uG1PHuiE+SDO3FlkFFhtZIQ9+jvprqrPlXaTjYs
+TFTHFocpAgMBAAECggEAK7gH8pGbEgjkgwJRm5hYWBkMGhzCEeLjvtM8BE/RA7/b
+Uod/ky+pCJtzu29z0kZ4b5UunCZ/aNbApfsG9B9wl1JjcoI76ctURTpfyDyNAziv
+8XMi/vT/9EYhib3lmeIM64SkVsPgENLYE+9jEagYJXjAkPihJbCGSD5iSmAgd6J1
+dmxiSSQhlcBnhyIwOk/ZmnuVvRQ1sNXO93X6YaVD7sM0RSel1v4/JusJgZ2TDsWW
+QRljXC1F36xYzbDh+ZdGEHVQggCcFt2fF38ClGeuOi5O4mCpNszo1fTPHoTzRHAw
+SNr7M2sBgbFDV1wphiwefOZ+IRh27IVKdAhv1UDFAQKBgQDx1QBmGFQ9d8a+nA9A
+tnSGwQ8fL0TlI1SGqZOsh4JOZI76BQwlV2M2hvn4gmjRzuo94/+fM3m1xwPfy53v
+YPyg5acIsj61wJOFLYuva28WUHeLq7taZZd7ALOfxtB3cdClfo/NYJ6Z29vJ8dzY
+AyNg22NOhld63WF8DYsmXNkJJQKBgQDoBw7Brx1bVE4RiWzYrpJF4PTsrwEiQ8SE
+/ENdnDxuz0xbOkNvwRFWyAdYciXssGVMvQFzmG0eQChbJQCf25ldImA6L1YBwyO2
+5Xl5YYImjCf9g3oBPBYsRA4zfDWRP0e1r/xVhYHMUoC6p/HG2vVXVad5yFY/eRUC
+8jQaF9HQtQKBgQDQaG86jRb0DigiFl3yuAq+ItzEVDk8e3EZyERyuCltI64v+2+X
+MrNWx4XfS4vH3Fj0U2v1KChopoVJNbH7HQs6IhAMJ4hxm+/GIxUxbRXEFj6gCLSi
+V9Du+RDTzkPT3CsipGqLZQvprpbAd4aKRlIT4522i4ISaXzcqtNTkUqdXQKBgEcq
+av9C+6kYeX1tfiIToS+nqNezcZCV4n+7c9oRYoPGNzA/9ZEgUXYhkgcxs6oeDGP2
+EKzo0ocVvIsAFWnyi96B/au6+xE9TgX56kEthCLYmCdsnQ4l5NMc6JIoBbIQC6mR
+Wb7NXRtTLsKRYlnQrLFlxyFWLgX32Fb3/L0IE0WFAoGBALRl00pxHwCyK0cjNckP
+/HcfesW9StffAJ8/KAVA3pD8p5F5L+ko2epiBiJ4stflY/KtYJvw1wHurx13hgz4
+E1oNGbISBRNH3H86oWDyJyue4zBgNoGmIFyaTj/FbQBtWgf6E075VLhH+7HGVfbR
+AexEGfRTwbnBP6LKaWfXxPG7
+-----END PRIVATE KEY-----`;
+
+const PUBLIC_RSA_KEY_PEM = 
+`-----BEGIN CERTIFICATE-----
+MIIC6zCCAdMCEBKdG9GfNgyeAQ5hNhlF7T4wDQYJKoZIhvcNAQELBQAwMjEjMCEG
+A1UEAwwaTmF0aW9uYWwgQ1NDQSBvZiBGcmllc2xhbmQxCzAJBgNVBAYTAkZSMB4X
+DTIxMDkyMjIwMjEyNFoXDTI2MDgwNzIwMjEyNFowNjEnMCUGA1UEAwweRFNDIG51
+bWJlciB3b3JrZXIgb2YgRnJpZXNsYW5kMQswCQYDVQQGEwJGUjCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBANsvsyAl3jr8XjxLmxAs4o34j+K4K4clthXB
+23yg2TcqSG25ihRaKxb2Nvg6lI7FnWp9TRuskG/7zIxK1B2UTYcbyPKjOFLdLmKt
+EAgTN3T87bYcmeRE6e8y4AljoTW7Mra1bANLVfKVUysS8Ao+3Ds9OEdPAOg4Al13
+luOIhBGclbmgt2XOjlZNybbAjUMv7HuTj6Qv1f5ah610//LbXMWzSOCaD0WoD3JM
+hsjUFYjhV/+gVpZVKiMaiSiVd1CB7oQFZm6bQnigKgAut8BL2FDOFoPNPgKe61Hf
+EL3u4bU8e6IT5IM7cWWQUWG1khD36O+muqs+VdpONixMVMcWhykCAwEAATANBgkq
+hkiG9w0BAQsFAAOCAQEALV7Msp6YJWHjnCOvq62pz5ycAemJdGMEyHogMijvJaRo
+eap9aF23DRhpzVEniLZ0RLfQZ8+LJewoIoqv0KvO1tROXfYIfMn7/4EqHPXFL14H
+GFwe5rLG35b/1gURPRTUWe8e+/eZEvI6tCaZ+TPm5hq3xU4ugZ7jT4jqLpf4bI04
+UFqxCdgdqETkp1yfkDXsdKvIGAjb1Lp59+TvHSbG/hg/d3Gfc4xgYHMeQU0ED31C
+T4kAe+OgjOKQZK3MOf63RRjWeCwjmK1M1yuJS4YkTNp8mshx+k7/YLC1kZfOivbQ
+zzPrd7J5eJUgqmwM2t7F3DzEY+H7Tssv5WmPaFuT4w==
+-----END CERTIFICATE-----`;
+
 const TEST_PAYLOAD = {
   "ver": "1.0.0",
   "nam": {
@@ -125,24 +174,23 @@ describe('EU DCC', function() {
     expect(unpacked.toString()).to.eql(binaryData.toString());
   });
 
-  it('should Sign Pack And Unpack Verify JSON', async () => {
+  it('should Sign Pack And Unpack Verify JSON (ECDSA)', async () => {
     const signed = await signAndPack(TEST_PAYLOAD, PUBLIC_KEY_PEM, PRIVATE_KEY_P8);
     const resultJSON = await unpackAndVerify(signed);
     expect(resultJSON).to.eql(TEST_PAYLOAD);
   });
 
-  it('should Sign Pack and Unpack Verify a json using Base32', async () => {
-    const signed = await signAndPack32(TEST_PAYLOAD, PUBLIC_KEY_PEM, PRIVATE_KEY_P8);
-    const result = await unpackAndVerify(signed);
-    expect(result).to.eql(TEST_PAYLOAD);
-    expect(signed.length).to.eql(635);
+  it('should Sign Pack And Unpack Verify JSON (RSA)', async () => {
+    const signed = await signAndPack(TEST_PAYLOAD, PUBLIC_RSA_KEY_PEM, PRIVATE_RSA_KEY_P8);
+    const resultJSON = await unpackAndVerify(signed);
+    expect(resultJSON).to.eql(TEST_PAYLOAD);
   });
 
   it('should Sign Pack and Unpack Verify a json using Base45', async () => {
-    const signed = await signAndPack45(TEST_PAYLOAD, PUBLIC_KEY_PEM, PRIVATE_KEY_P8);
+    const signed = await signAndPack(TEST_PAYLOAD, PUBLIC_KEY_PEM, PRIVATE_KEY_P8);
     const result = await unpackAndVerify(signed);
     expect(result).to.eql(TEST_PAYLOAD);
-    expect(signed.length).to.eql(595);
+    //expect(signed.length).to.eql(595);
   });
 
   it('should Make CWT', async () => {

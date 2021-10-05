@@ -1,6 +1,6 @@
 {
   "name": "@pathcheck/dcc-sdk",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Verifiable QR SDK for EU Digital Covid Certificates",
   "private": false,
   "main": "lib/index.js",

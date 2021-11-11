@@ -6,7 +6,7 @@ describe('SE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Lövström', 'fnt': 'LOEVSTROEM', 'gn': 'Oscar', 'gnt': 'OSCAR'}, 'dob': '1958-11-11', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/21/1529', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-03-18', 'co': 'SE', 'is': 'Swedish eHealth Agency', 'ci': 'URN:UVCI:01:SE:EHM/V100000024GI5HM'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Lövström', 'fnt': 'LOEVSTROEM', 'gn': 'Oscar', 'gnt': 'OSCAR'}, 'dob': '1958-11-11', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/21/1529', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-03-18', 'co': 'SE', 'is': 'Swedish eHealth Agency', 'ci': 'URN:UVCI:01:SE:EHM/V100000024GI5HM'}]});
   });
 
   it('should verify SE_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('SE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Lövström', 'fnt': 'LOEVSTROEM', 'gn': 'Oscar', 'gnt': 'OSCAR'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'sc': new Date('2021-06-02T06:02:13.262564Z'), 'tr': '260415000', 'tc': 'Arlanda Airport Covid Center 1', 'co': 'SE', 'is': 'Swedish eHealth Agency', 'ci': 'URN:UVCI:01:SE:EHM/TARN89875439877'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Lövström', 'fnt': 'LOEVSTROEM', 'gn': 'Oscar', 'gnt': 'OSCAR'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'sc': new Date('2021-06-02T06:02:13.262564Z'), 'tr': '260415000', 'tc': 'Arlanda Airport Covid Center 1', 'co': 'SE', 'is': 'Swedish eHealth Agency', 'ci': 'URN:UVCI:01:SE:EHM/TARN89875439877'}]});
   });
 
   it('should verify SE_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('SE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Lövström', 'fnt': 'LOEVSTROEM', 'gn': 'Oscar', 'gnt': 'OSCAR'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'sc': '2021-06-02T06:02:13.262564Z', 'tr': '260415000', 'tc': 'Arlanda Airport Covid Center 1', 'co': 'SE', 'is': 'Swedish eHealth Agency', 'ci': 'URN:UVCI:01:SE:EHM/TARN89875439877'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Lövström', 'fnt': 'LOEVSTROEM', 'gn': 'Oscar', 'gnt': 'OSCAR'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'sc': '2021-06-02T06:02:13.262564Z', 'tr': '260415000', 'tc': 'Arlanda Airport Covid Center 1', 'co': 'SE', 'is': 'Swedish eHealth Agency', 'ci': 'URN:UVCI:01:SE:EHM/TARN89875439877'}]});
   });
 
   it('should verify SE_2DCode_raw_4', async () => {
@@ -30,7 +30,7 @@ describe('SE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Lövström', 'fnt': 'LOEVSTROEM', 'gn': 'Oscar', 'gnt': 'OSCAR'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'ma': '1232', 'sc': new Date('2021-06-02T04:31:14.168957Z'), 'tr': '260415000', 'tc': 'Axelsbergs vårdcentral', 'co': 'SE', 'is': 'Swedish eHealth Agency', 'ci': 'URN:UVCI:01:SE:EHM/TSTAX67554312'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Lövström', 'fnt': 'LOEVSTROEM', 'gn': 'Oscar', 'gnt': 'OSCAR'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'ma': '1232', 'sc': new Date('2021-06-02T04:31:14.168957Z'), 'tr': '260415000', 'tc': 'Axelsbergs vårdcentral', 'co': 'SE', 'is': 'Swedish eHealth Agency', 'ci': 'URN:UVCI:01:SE:EHM/TSTAX67554312'}]});
   });
 
   it('should verify SE_2DCode_raw_5', async () => {
@@ -38,7 +38,7 @@ describe('SE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Lövström', 'fnt': 'LOEVSTROEM', 'gn': 'Oscar', 'gnt': 'OSCAR'}, 'dob': '1958-11-11', 'r': [{'tg': '840539006', 'fr': '2021-05-22', 'co': 'SE', 'is': 'Swedish eHealth Agency', 'df': '2021-06-02', 'du': '2021-08-31', 'ci': 'URN:UVCI:01:SE:EHM/R987765321'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Lövström', 'fnt': 'LOEVSTROEM', 'gn': 'Oscar', 'gnt': 'OSCAR'}, 'dob': '1958-11-11', 'r': [{'tg': '840539006', 'fr': '2021-05-22', 'co': 'SE', 'is': 'Swedish eHealth Agency', 'df': '2021-06-02', 'du': '2021-08-31', 'ci': 'URN:UVCI:01:SE:EHM/R987765321'}]});
   });
 
 });

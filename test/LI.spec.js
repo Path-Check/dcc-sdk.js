@@ -6,7 +6,7 @@ describe('LI', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.1.0', 'nam': {'fn': 'Musterfrau', 'fnt': 'MUSTERFRAU', 'gn': 'Maria', 'gnt': 'MARIA'}, 'dob': '1991-04-18', 'r': [{'tg': '840539006', 'fr': '2021-04-01', 'co': 'LI', 'is': 'Liechtensteinische Landesverwaltung', 'df': '2021-05-01', 'du': '2021-10-01', 'ci': 'URN:UVCI:01:LI:9T9FZ3UMIGA73UW'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.1.0', 'nam': {'fn': 'Musterfrau', 'fnt': 'MUSTERFRAU', 'gn': 'Maria', 'gnt': 'MARIA'}, 'dob': '1991-04-18', 'r': [{'tg': '840539006', 'fr': '2021-04-01', 'co': 'LI', 'is': 'Liechtensteinische Landesverwaltung', 'df': '2021-05-01', 'du': '2021-10-01', 'ci': 'URN:UVCI:01:LI:9T9FZ3UMIGA73UW'}]});
   });
 
   it('should verify LI_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('LI', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.1.0', 'nam': {'fn': 'Mustermann', 'fnt': 'MUSTERMANN', 'gn': 'Max', 'gnt': 'MAX'}, 'dob': '1984-02-04', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'sc': '2021-06-01T00:00:00+02:00', 'dr': '2021-06-02T00:00:00+02:00', 'tr': '260415000', 'tc': 'Testcenter', 'co': 'LI', 'is': 'Liechtensteinische Landesverwaltung', 'ci': 'URN:UVCI:01:LI:8BINJZC7UE8J6FM'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.1.0', 'nam': {'fn': 'Mustermann', 'fnt': 'MUSTERMANN', 'gn': 'Max', 'gnt': 'MAX'}, 'dob': '1984-02-04', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'sc': '2021-06-01T00:00:00+02:00', 'dr': '2021-06-02T00:00:00+02:00', 'tr': '260415000', 'tc': 'Testcenter', 'co': 'LI', 'is': 'Liechtensteinische Landesverwaltung', 'ci': 'URN:UVCI:01:LI:8BINJZC7UE8J6FM'}]});
   });
 
   it('should verify LI_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('LI', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.1.0', 'nam': {'fn': 'Musterfrau', 'fnt': 'MUSTERFRAU', 'gn': 'Maria', 'gnt': 'MARIA'}, 'dob': '1991-04-18', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'Bharat-Biotech', 'dn': 1, 'sd': 2, 'dt': '2021-06-03', 'co': 'LI', 'is': 'Liechtensteinische Landesverwaltung', 'ci': 'URN:UVCI:01:LI:3F1C9TPLYN95JNN'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.1.0', 'nam': {'fn': 'Musterfrau', 'fnt': 'MUSTERFRAU', 'gn': 'Maria', 'gnt': 'MARIA'}, 'dob': '1991-04-18', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'Bharat-Biotech', 'dn': 1, 'sd': 2, 'dt': '2021-06-03', 'co': 'LI', 'is': 'Liechtensteinische Landesverwaltung', 'ci': 'URN:UVCI:01:LI:3F1C9TPLYN95JNN'}]});
   });
 
 });

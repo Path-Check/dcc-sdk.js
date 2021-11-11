@@ -6,7 +6,7 @@ describe('BE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ebraert', 'fnt': 'EBRAERT', 'gn': 'Peter Paul Maria', 'gnt': 'PETER<PAUL<MARIA'}, 'dob': '1980-01-14', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1525', 'ma': 'ORG-100001417', 'dn': 1, 'sd': 1, 'dt': '2021-05-15', 'co': 'BE', 'is': 'VAZG', 'ci': '01BEVLMP7BEIN6GQWZTAKP6OBBAN#J'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ebraert', 'fnt': 'EBRAERT', 'gn': 'Peter Paul Maria', 'gnt': 'PETER<PAUL<MARIA'}, 'dob': '1980-01-14', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1525', 'ma': 'ORG-100001417', 'dn': 1, 'sd': 1, 'dt': '2021-05-15', 'co': 'BE', 'is': 'VAZG', 'ci': '01BEVLMP7BEIN6GQWZTAKP6OBBAN#J'}]});
   });
 
   it('should verify BE_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('BE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ebraert', 'fnt': 'EBRAERT', 'gn': 'Peter Paul Maria', 'gnt': 'PETER<PAUL<MARIA'}, 'dob': '1980-01-14', 'r': [{'tg': '840539006', 'fr': '2021-05-01', 'co': 'BE', 'is': 'SC-BE', 'df': '2021-05-26', 'du': '2021-11-08', 'ci': '01BEVLOKPNUUDKCBFKBUYMSPXV5G#I'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ebraert', 'fnt': 'EBRAERT', 'gn': 'Peter Paul Maria', 'gnt': 'PETER<PAUL<MARIA'}, 'dob': '1980-01-14', 'r': [{'tg': '840539006', 'fr': '2021-05-01', 'co': 'BE', 'is': 'SC-BE', 'df': '2021-05-26', 'du': '2021-11-08', 'ci': '01BEVLOKPNUUDKCBFKBUYMSPXV5G#I'}]});
   });
 
   it('should verify BE_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('BE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ebraert', 'fnt': 'EBRAERT', 'gn': 'Peter Paul Maria', 'gnt': 'PETER<PAUL<MARIA'}, 'dob': '1980-01-14', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'sc': new Date('2021-05-25T09:02:07.000000Z'), 'dr': new Date('2021-05-15T19:21:22.000000Z'), 'tr': '260415000', 'tc': '81160393', 'co': 'BE', 'is': 'SC-BE', 'ci': '01BEVLBDIML2KR1IFKPPCSX8OQF3#K'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ebraert', 'fnt': 'EBRAERT', 'gn': 'Peter Paul Maria', 'gnt': 'PETER<PAUL<MARIA'}, 'dob': '1980-01-14', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'sc': new Date('2021-05-25T09:02:07.000000Z'), 'dr': new Date('2021-05-15T19:21:22.000000Z'), 'tr': '260415000', 'tc': '81160393', 'co': 'BE', 'is': 'SC-BE', 'ci': '01BEVLBDIML2KR1IFKPPCSX8OQF3#K'}]});
   });
 
 });

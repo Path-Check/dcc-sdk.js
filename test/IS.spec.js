@@ -6,7 +6,7 @@ describe('IS', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'dob': '2000-01-01', 'nam': {'fn': 'Prófarason', 'fnt': 'PROFARASON', 'gn': 'Þarf Að Prófa', 'gnt': 'THARF<AD<PROFA'}, 'v': [{'ci': 'URN:UVCI:01:IS:VERA3333#D', 'co': 'IS', 'dn': 2, 'dt': '2021-01-01', 'is': 'Directorate of Health of Iceland Test', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': 'J07BX03'}], 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '2000-01-01', 'nam': {'fn': 'Prófarason', 'fnt': 'PROFARASON', 'gn': 'Þarf Að Prófa', 'gnt': 'THARF<AD<PROFA'}, 'v': [{'ci': 'URN:UVCI:01:IS:VERA3333#D', 'co': 'IS', 'dn': 2, 'dt': '2021-01-01', 'is': 'Directorate of Health of Iceland Test', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': 'J07BX03'}], 'ver': '1.0.0'});
   });
 
   it('should verify IS_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('IS', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'dob': '2000-01-01', 'nam': {'fn': 'Mjöggottson', 'fnt': 'MJOEGGOTTSON', 'gn': 'Ekki Vírus', 'gnt': 'EKKI<VIRUS'}, 't': [{'ci': '01 IS/ABC4556#8', 'co': 'IS', 'dr': '2021-05-14T17:46:45Z', 'is': 'Directorate of Health of Iceland Test', 'ma': '1304', 'sc': '2021-05-14T13:46:45Z', 'tc': 'Department of ClinicalMicrobiology,Landspitali', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '2000-01-01', 'nam': {'fn': 'Mjöggottson', 'fnt': 'MJOEGGOTTSON', 'gn': 'Ekki Vírus', 'gnt': 'EKKI<VIRUS'}, 't': [{'ci': '01 IS/ABC4556#8', 'co': 'IS', 'dr': '2021-05-14T17:46:45Z', 'is': 'Directorate of Health of Iceland Test', 'ma': '1304', 'sc': '2021-05-14T13:46:45Z', 'tc': 'Department of ClinicalMicrobiology,Landspitali', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'ver': '1.0.0'});
   });
 
   it('should verify IS_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('IS', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'dob': '2000-01-01', 'nam': {'fn': 'Testingson', 'fnt': 'TESTINGSON', 'gn': 'Testing', 'gnt': 'TESTING'}, 't': [{'ci': '01 IS/ABC4557#6', 'co': 'IS', 'dr': '2021-05-17T18:21:16Z', 'is': 'Directorate of Health of Iceland Test', 'ma': '1304', 'sc': '2021-05-17T14:21:16Z', 'tc': 'Department of ClinicalMicrobiology,Landspitali', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '2000-01-01', 'nam': {'fn': 'Testingson', 'fnt': 'TESTINGSON', 'gn': 'Testing', 'gnt': 'TESTING'}, 't': [{'ci': '01 IS/ABC4557#6', 'co': 'IS', 'dr': '2021-05-17T18:21:16Z', 'is': 'Directorate of Health of Iceland Test', 'ma': '1304', 'sc': '2021-05-17T14:21:16Z', 'tc': 'Department of ClinicalMicrobiology,Landspitali', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'ver': '1.0.0'});
   });
 
   it('should verify IS_2DCode_raw_4', async () => {
@@ -30,7 +30,7 @@ describe('IS', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'dob': '2000-01-01', 'nam': {'fn': 'Testingson', 'fnt': 'TESTINGSON', 'gn': 'Testing', 'gnt': 'TESTING'}, 't': [{'ci': 'URN:UVCI:01:IS:T123123323#7', 'co': 'IS', 'dr': '2021-05-26T13:32:15Z', 'is': 'Directorate of Health of Iceland Test', 'ma': '1304', 'sc': '2021-05-26T09:32:15Z', 'tc': 'Department of ClinicalMicrobiology,Landspitali', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '2000-01-01', 'nam': {'fn': 'Testingson', 'fnt': 'TESTINGSON', 'gn': 'Testing', 'gnt': 'TESTING'}, 't': [{'ci': 'URN:UVCI:01:IS:T123123323#7', 'co': 'IS', 'dr': '2021-05-26T13:32:15Z', 'is': 'Directorate of Health of Iceland Test', 'ma': '1304', 'sc': '2021-05-26T09:32:15Z', 'tc': 'Department of ClinicalMicrobiology,Landspitali', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'ver': '1.0.0'});
   });
 
   it('should verify IS_2DCode_raw_5', async () => {
@@ -38,7 +38,7 @@ describe('IS', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'dob': '2000-01-01', 'nam': {'fn': 'Prófarason', 'fnt': 'PROFARASON', 'gn': 'Þarf Að Prófa', 'gnt': 'THARF<AD<PROFA'}, 'v': [{'ci': 'URN:UVCI:01:IS:VERA1234#F', 'co': 'IS', 'dn': 2, 'dt': '2021-01-01', 'is': 'Directorate of Health of Iceland Test', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': 'J07BX03'}], 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '2000-01-01', 'nam': {'fn': 'Prófarason', 'fnt': 'PROFARASON', 'gn': 'Þarf Að Prófa', 'gnt': 'THARF<AD<PROFA'}, 'v': [{'ci': 'URN:UVCI:01:IS:VERA1234#F', 'co': 'IS', 'dn': 2, 'dt': '2021-01-01', 'is': 'Directorate of Health of Iceland Test', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': 'J07BX03'}], 'ver': '1.0.0'});
   });
 
 });

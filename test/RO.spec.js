@@ -6,7 +6,7 @@ describe('RO', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ion', 'fnt': 'ION', 'gn': 'Teodor', 'gnt': 'TEODOR'}, 'dob': '1989-01-12', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-01-18', 'co': 'RO', 'is': 'Ministry of Health', 'ci': 'URN:UVCI:01:RO:SNYM1MMU3P#J'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ion', 'fnt': 'ION', 'gn': 'Teodor', 'gnt': 'TEODOR'}, 'dob': '1989-01-12', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-01-18', 'co': 'RO', 'is': 'Ministry of Health', 'ci': 'URN:UVCI:01:RO:SNYM1MMU3P#J'}]});
   });
 
   it('should verify RO_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('RO', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ion', 'fnt': 'ION', 'gn': 'Teodor', 'gnt': 'TEODOR'}, 'dob': '1989-01-12', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-01-18', 'co': 'RO', 'is': 'Ministry of Health', 'ci': 'URN:UVCI:01:RO:Q6M0U00Y5S#I'}, {'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-02-08', 'co': 'RO', 'is': 'Ministry of Health', 'ci': 'URN:UVCI:01:RO:S7MVLVV8YQ#B'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ion', 'fnt': 'ION', 'gn': 'Teodor', 'gnt': 'TEODOR'}, 'dob': '1989-01-12', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-01-18', 'co': 'RO', 'is': 'Ministry of Health', 'ci': 'URN:UVCI:01:RO:Q6M0U00Y5S#I'}, {'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-02-08', 'co': 'RO', 'is': 'Ministry of Health', 'ci': 'URN:UVCI:01:RO:S7MVLVV8YQ#B'}]});
   });
 
   it('should verify RO_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('RO', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Spiridon', 'fnt': 'SPIRIDON', 'gn': 'Dumitrescu', 'gnt': 'DUMITRESCU'}, 'dob': '1956-08-11', 'r': [{'tg': '840539006', 'fr': '2021-02-20', 'co': 'RO', 'is': 'Ministry of Health', 'df': '2021-04-04', 'du': '2021-10-04', 'ci': 'URN:UVCI:01:RO:QR75N55V2Q#O'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Spiridon', 'fnt': 'SPIRIDON', 'gn': 'Dumitrescu', 'gnt': 'DUMITRESCU'}, 'dob': '1956-08-11', 'r': [{'tg': '840539006', 'fr': '2021-02-20', 'co': 'RO', 'is': 'Ministry of Health', 'df': '2021-04-04', 'du': '2021-10-04', 'ci': 'URN:UVCI:01:RO:QR75N55V2Q#O'}]});
   });
 
   it('should verify RO_2DCode_raw_4', async () => {
@@ -30,7 +30,7 @@ describe('RO', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pluteanu', 'fnt': 'PLUTEANU', 'gn': 'Elena', 'gnt': 'ELENA'}, 'dob': '1998-02-26', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'ma': '1331', 'sc': '2021-05-15T12:34:56Z', 'dr': '2021-05-16T12:45:01Z', 'tr': '260415000', 'tc': 'Testing center 1', 'co': 'RO', 'is': 'Ministry of Health', 'ci': 'URN:UVCI:01:RO:QW3L2LL66Q#4'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pluteanu', 'fnt': 'PLUTEANU', 'gn': 'Elena', 'gnt': 'ELENA'}, 'dob': '1998-02-26', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'ma': '1331', 'sc': '2021-05-15T12:34:56Z', 'dr': '2021-05-16T12:45:01Z', 'tr': '260415000', 'tc': 'Testing center 1', 'co': 'RO', 'is': 'Ministry of Health', 'ci': 'URN:UVCI:01:RO:QW3L2LL66Q#4'}]});
   });
 
 });

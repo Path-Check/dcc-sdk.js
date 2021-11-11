@@ -6,7 +6,7 @@ describe('HR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'r': [{'ci': 'urn:uvci:01:HR:MZ0000000314', 'co': 'HR', 'df': '2020-12-15', 'du': '2021-06-13', 'fr': '2020-12-01', 'is': 'Ministry of Health', 'tg': '840539006'}], 'dob': '2000-01-01', 'nam': {'fn': 'FERNÁNDEZ', 'gn': 'RAMÓN', 'fnt': 'FERNANDEZ', 'gnt': 'RAMON'}, 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'r': [{'ci': 'urn:uvci:01:HR:MZ0000000314', 'co': 'HR', 'df': '2020-12-15', 'du': '2021-06-13', 'fr': '2020-12-01', 'is': 'Ministry of Health', 'tg': '840539006'}], 'dob': '2000-01-01', 'nam': {'fn': 'FERNÁNDEZ', 'gn': 'RAMÓN', 'fnt': 'FERNANDEZ', 'gnt': 'RAMON'}, 'ver': '1.0.0'});
   });
 
   it('should verify HR_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('HR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'t': [{'ci': 'urn:uvci:01:HR:MZ0000000371', 'co': 'HR', 'dr': '2021-04-25T00:00:00+02:00', 'is': 'Ministry of Health', 'sc': '2021-04-25T00:00:00+02:00', 'tc': 'KLINIČKI BOLNIČKI CENTAR RIJEKA', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'dob': '1996-11-03', 'nam': {'fn': 'TKALAC', 'gn': 'ADRIJANA', 'fnt': 'TKALAC', 'gnt': 'ADRIJANA'}, 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'t': [{'ci': 'urn:uvci:01:HR:MZ0000000371', 'co': 'HR', 'dr': '2021-04-25T00:00:00+02:00', 'is': 'Ministry of Health', 'sc': '2021-04-25T00:00:00+02:00', 'tc': 'KLINIČKI BOLNIČKI CENTAR RIJEKA', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'dob': '1996-11-03', 'nam': {'fn': 'TKALAC', 'gn': 'ADRIJANA', 'fnt': 'TKALAC', 'gnt': 'ADRIJANA'}, 'ver': '1.0.0'});
   });
 
   it('should verify HR_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('HR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'v': [{'ci': 'urn:uvci:01:HR:MZ0000000310', 'co': 'HR', 'dn': 2, 'dt': '2021-04-05', 'is': 'Ministry of Health', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': 'J07BX03'}], 'dob': '1969-02-02', 'nam': {'fn': 'PREZIME01', 'gn': 'TEST01', 'fnt': 'PREZIME', 'gnt': 'TEST'}, 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'v': [{'ci': 'urn:uvci:01:HR:MZ0000000310', 'co': 'HR', 'dn': 2, 'dt': '2021-04-05', 'is': 'Ministry of Health', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': 'J07BX03'}], 'dob': '1969-02-02', 'nam': {'fn': 'PREZIME01', 'gn': 'TEST01', 'fnt': 'PREZIME', 'gnt': 'TEST'}, 'ver': '1.0.0'});
   });
 
   it('should verify HR_2DCode_raw_4', async () => {
@@ -30,7 +30,7 @@ describe('HR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'t': [{'ci': 'urn:uvci:01:HR:MZ0000000378', 'co': 'HR', 'dr': '2021-04-20T00:00:00+02:00', 'is': 'Ministry of Health', 'ma': '1223', 'nm': 'BIOSYNEX COVID-19 Ag BSS', 'sc': '2021-04-20T00:00:00+02:00', 'tc': 'ZAVOD ZA JAVNO ZDRAVSTVO OSJEČKO-BARANJSKE ŽUPANIJ', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP217198-3'}], 'dob': '1963-03-01', 'nam': {'fn': 'KLASIĆ', 'gn': 'LJILJANA', 'fnt': 'KLASIC', 'gnt': 'LJILJANA'}, 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'t': [{'ci': 'urn:uvci:01:HR:MZ0000000378', 'co': 'HR', 'dr': '2021-04-20T00:00:00+02:00', 'is': 'Ministry of Health', 'ma': '1223', 'nm': 'BIOSYNEX COVID-19 Ag BSS', 'sc': '2021-04-20T00:00:00+02:00', 'tc': 'ZAVOD ZA JAVNO ZDRAVSTVO OSJEČKO-BARANJSKE ŽUPANIJ', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP217198-3'}], 'dob': '1963-03-01', 'nam': {'fn': 'KLASIĆ', 'gn': 'LJILJANA', 'fnt': 'KLASIC', 'gnt': 'LJILJANA'}, 'ver': '1.0.0'});
   });
 
 });

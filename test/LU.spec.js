@@ -6,7 +6,7 @@ describe('LU', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'r': [{'ci': '01/LU/2MRMF23YGV9XH#1L', 'co': 'LU', 'df': '2021-06-12', 'du': '2021-11-28', 'fr': '2021-06-01', 'is': 'MINISTRY OF HEALTH', 'tg': '840539006'}], 'dob': '1967-03-01', 'nam': {'fn': 'Spécimen-Mustermann', 'gn': 'Jean-Pierre Marcel', 'fnt': 'SPECIMEN<MUSTERMANN', 'gnt': 'JEAN<PIERRE<MARCEL'}, 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'r': [{'ci': '01/LU/2MRMF23YGV9XH#1L', 'co': 'LU', 'df': '2021-06-12', 'du': '2021-11-28', 'fr': '2021-06-01', 'is': 'MINISTRY OF HEALTH', 'tg': '840539006'}], 'dob': '1967-03-01', 'nam': {'fn': 'Spécimen-Mustermann', 'gn': 'Jean-Pierre Marcel', 'fnt': 'SPECIMEN<MUSTERMANN', 'gnt': 'JEAN<PIERRE<MARCEL'}, 'ver': '1.0.0'});
   });
 
   it('should verify LU_2DCode_raw_INCERT_R_DCC_Vaccination', async () => {
@@ -14,7 +14,7 @@ describe('LU', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'v': [{'ci': '01/LU/1GJBHZ9HOOZ8W#3K', 'co': 'LU', 'dn': 2, 'dt': '2021-05-30', 'is': 'MINISTRY OF HEALTH', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': '1119349007'}], 'dob': '1983-08-19', 'nam': {'fn': 'Spécimen', 'gn': 'Jeanne', 'fnt': 'SPECIMEN', 'gnt': 'JEANNE'}, 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'v': [{'ci': '01/LU/1GJBHZ9HOOZ8W#3K', 'co': 'LU', 'dn': 2, 'dt': '2021-05-30', 'is': 'MINISTRY OF HEALTH', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': '1119349007'}], 'dob': '1983-08-19', 'nam': {'fn': 'Spécimen', 'gn': 'Jeanne', 'fnt': 'SPECIMEN', 'gnt': 'JEANNE'}, 'ver': '1.0.0'});
   });
 
   it('should verify LU_2DCode_raw_INCERT_R_DCC_NAAT', async () => {
@@ -22,7 +22,7 @@ describe('LU', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'t': [{'ci': '01/LU/3RD8KQOFR123Q#1E', 'co': 'LU', 'is': 'MINISTRY OF HEALTH', 'nm': 'Allplex 2019-nCoV assay', 'sc': '2021-04-13T12:20:00Z', 'tc': 'Test Utopia L-2551 Luxembourg', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'dob': '1967-03-01', 'nam': {'fn': 'Spécimen-Mustermann', 'gn': 'Jean-Pierre Marcel', 'fnt': 'SPECIMEN<MUSTERMANN', 'gnt': 'JEAN<PIERRE<MARCEL'}, 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'t': [{'ci': '01/LU/3RD8KQOFR123Q#1E', 'co': 'LU', 'is': 'MINISTRY OF HEALTH', 'nm': 'Allplex 2019-nCoV assay', 'sc': '2021-04-13T12:20:00Z', 'tc': 'Test Utopia L-2551 Luxembourg', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'dob': '1967-03-01', 'nam': {'fn': 'Spécimen-Mustermann', 'gn': 'Jean-Pierre Marcel', 'fnt': 'SPECIMEN<MUSTERMANN', 'gnt': 'JEAN<PIERRE<MARCEL'}, 'ver': '1.0.0'});
   });
 
   it('should verify LU_2DCode_raw_INCERT_R_DCC_RAT', async () => {
@@ -30,7 +30,7 @@ describe('LU', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'t': [{'ci': '01/LU/18O5I86QFOIMS#OJ', 'co': 'LU', 'is': 'MINISTRY OF HEALTH', 'ma': '1604', 'sc': '2021-06-02T00:00:00Z', 'tc': 'Phar Utopia, L-2551 Luxembourg', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP217198-3'}], 'dob': '1983-08-19', 'nam': {'fn': 'Spécimen', 'gn': 'Jeanne', 'fnt': 'SPECIMEN', 'gnt': 'JEANNE'}, 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'t': [{'ci': '01/LU/18O5I86QFOIMS#OJ', 'co': 'LU', 'is': 'MINISTRY OF HEALTH', 'ma': '1604', 'sc': '2021-06-02T00:00:00Z', 'tc': 'Phar Utopia, L-2551 Luxembourg', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP217198-3'}], 'dob': '1983-08-19', 'nam': {'fn': 'Spécimen', 'gn': 'Jeanne', 'fnt': 'SPECIMEN', 'gnt': 'JEANNE'}, 'ver': '1.0.0'});
   });
 
 });

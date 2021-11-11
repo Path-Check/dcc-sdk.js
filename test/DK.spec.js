@@ -6,7 +6,7 @@ describe('DK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Trinke', 'fnt': 'TRINKE', 'gn': 'Larsen', 'gnt': 'LARSEN'}, 'dob': '1978-10-29', 'r': [{'tg': '840539006', 'fr': '2021-04-08', 'co': 'DK', 'is': 'Danish Health Data Authority', 'df': '2021-04-22', 'du': '2021-12-08', 'ci': 'URN:UVCI:01:DK:AAF8DC68A9B655528BA581CA0D04353F#Y'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Trinke', 'fnt': 'TRINKE', 'gn': 'Larsen', 'gnt': 'LARSEN'}, 'dob': '1978-10-29', 'r': [{'tg': '840539006', 'fr': '2021-04-08', 'co': 'DK', 'is': 'Danish Health Data Authority', 'df': '2021-04-22', 'du': '2021-12-08', 'ci': 'URN:UVCI:01:DK:AAF8DC68A9B655528BA581CA0D04353F#Y'}]});
   });
 
   it('should verify DK_2DCode_raw_10', async () => {
@@ -14,7 +14,7 @@ describe('DK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Jørgensen', 'fnt': 'JOERGENSEN', 'gn': 'Klaus', 'gnt': 'KLAUS'}, 'dob': '1983-01-06', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-05-20', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:F573106A0A315AB8A7F7016329C30550#2'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Jørgensen', 'fnt': 'JOERGENSEN', 'gn': 'Klaus', 'gnt': 'KLAUS'}, 'dob': '1983-01-06', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-05-20', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:F573106A0A315AB8A7F7016329C30550#2'}]});
   });
 
   it('should verify DK_2DCode_raw_1', async () => {
@@ -22,7 +22,7 @@ describe('DK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Klaus', 'fnt': 'KLAUS', 'gn': 'Jørgensen', 'gnt': 'JOERGENSEN'}, 'dob': '1983-01-06', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-05-03', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:B986830007345F99AE898FB82C6C61F2#A'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Klaus', 'fnt': 'KLAUS', 'gn': 'Jørgensen', 'gnt': 'JOERGENSEN'}, 'dob': '1983-01-06', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-05-03', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:B986830007345F99AE898FB82C6C61F2#A'}]});
   });
 
   it('should verify DK_2DCode_raw_11', async () => {
@@ -30,7 +30,7 @@ describe('DK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ågesen', 'fnt': 'AAGESEN', 'gn': 'Åge', 'gnt': 'AAGE'}, 'dob': '1945-11-20', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'sc': '2021-05-30T13:48:20Z', 'dr': '2021-05-31T12:48:20Z', 'tr': '260415000', 'tc': 'Test Center DK', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:B19D10B4E18551559EBDEE46248DA883#S'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ågesen', 'fnt': 'AAGESEN', 'gn': 'Åge', 'gnt': 'AAGE'}, 'dob': '1945-11-20', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'sc': '2021-05-30T13:48:20Z', 'dr': '2021-05-31T12:48:20Z', 'tr': '260415000', 'tc': 'Test Center DK', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:B19D10B4E18551559EBDEE46248DA883#S'}]});
   });
 
   it('should verify DK_2DCode_raw_2', async () => {
@@ -38,7 +38,7 @@ describe('DK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Åge', 'fnt': 'AAGE', 'gn': 'Ågesen', 'gnt': 'AAGESEN'}, 'dob': '1945-11-20', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'sc': '2021-05-16T22:14:51Z', 'dr': '2021-05-17T21:14:51Z', 'tr': '260415000', 'tc': 'Test Center DK', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:B19D10B4E18551559EBDEE46248DA883#S'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Åge', 'fnt': 'AAGE', 'gn': 'Ågesen', 'gnt': 'AAGESEN'}, 'dob': '1945-11-20', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'sc': '2021-05-16T22:14:51Z', 'dr': '2021-05-17T21:14:51Z', 'tr': '260415000', 'tc': 'Test Center DK', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:B19D10B4E18551559EBDEE46248DA883#S'}]});
   });
 
   it('should verify DK_2DCode_raw_12', async () => {
@@ -46,7 +46,7 @@ describe('DK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Larsen', 'fnt': 'LARSEN', 'gn': 'Trinke', 'gnt': 'TRINKE'}, 'dob': '1978-10-29', 'r': [{'tg': '840539006', 'fr': '2021-04-01', 'co': 'DK', 'is': 'Danish Health Data Authority', 'df': '2021-04-15', 'du': '2021-12-01', 'ci': 'URN:UVCI:01:DK:1B9B48CA1F4351F4A4C023D3815A74A9#I'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Larsen', 'fnt': 'LARSEN', 'gn': 'Trinke', 'gnt': 'TRINKE'}, 'dob': '1978-10-29', 'r': [{'tg': '840539006', 'fr': '2021-04-01', 'co': 'DK', 'is': 'Danish Health Data Authority', 'df': '2021-04-15', 'du': '2021-12-01', 'ci': 'URN:UVCI:01:DK:1B9B48CA1F4351F4A4C023D3815A74A9#I'}]});
   });
 
   it('should verify DK_2DCode_raw_3', async () => {
@@ -54,7 +54,7 @@ describe('DK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Trinke', 'fnt': 'TRINKE', 'gn': 'Larsen', 'gnt': 'LARSEN'}, 'dob': '1978-10-29', 'r': [{'tg': '840539006', 'fr': '2021-04-06', 'co': 'DK', 'is': 'Danish Health Data Authority', 'df': '2021-04-20', 'du': '2021-10-03', 'ci': 'URN:UVCI:01:DK:1D6DAB71F99A5C87A657D6D904558001#R'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Trinke', 'fnt': 'TRINKE', 'gn': 'Larsen', 'gnt': 'LARSEN'}, 'dob': '1978-10-29', 'r': [{'tg': '840539006', 'fr': '2021-04-06', 'co': 'DK', 'is': 'Danish Health Data Authority', 'df': '2021-04-20', 'du': '2021-10-03', 'ci': 'URN:UVCI:01:DK:1D6DAB71F99A5C87A657D6D904558001#R'}]});
   });
 
   it('should verify DK_2DCode_raw_8', async () => {
@@ -62,7 +62,7 @@ describe('DK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Toraf', 'fnt': 'TORAF', 'gn': 'Olesen', 'gnt': 'OLESEN'}, 'dob': '1939-01-06', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'sc': '2021-05-18T16:09:50Z', 'dr': '2021-05-19T15:09:50Z', 'tr': '260415000', 'tc': 'Test Center DK', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:B19D10B4E18551559EBDEE46248DA883#S'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Toraf', 'fnt': 'TORAF', 'gn': 'Olesen', 'gnt': 'OLESEN'}, 'dob': '1939-01-06', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'sc': '2021-05-18T16:09:50Z', 'dr': '2021-05-19T15:09:50Z', 'tr': '260415000', 'tc': 'Test Center DK', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:B19D10B4E18551559EBDEE46248DA883#S'}]});
   });
 
   it('should verify DK_2DCode_raw_4', async () => {
@@ -70,7 +70,7 @@ describe('DK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Toraf', 'fnt': 'TORAF', 'gn': 'Olesen', 'gnt': 'OLESEN'}, 'dob': '1939-01-06', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'sc': '2021-05-16T22:28:43Z', 'dr': '2021-05-17T21:28:43Z', 'tr': '260415000', 'tc': 'Test Center DK', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:B19D10B4E18551559EBDEE46248DA883#S'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Toraf', 'fnt': 'TORAF', 'gn': 'Olesen', 'gnt': 'OLESEN'}, 'dob': '1939-01-06', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'sc': '2021-05-16T22:28:43Z', 'dr': '2021-05-17T21:28:43Z', 'tr': '260415000', 'tc': 'Test Center DK', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:B19D10B4E18551559EBDEE46248DA883#S'}]});
   });
 
   it('should verify DK_2DCode_raw_5', async () => {
@@ -78,7 +78,7 @@ describe('DK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Klaus', 'fnt': 'KLAUS', 'gn': 'Jørgensen', 'gnt': 'JOERGENSEN'}, 'dob': '1983-01-06', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-05-04', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:0EF88044F7935DF2B4A938A38C14C97C#C'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Klaus', 'fnt': 'KLAUS', 'gn': 'Jørgensen', 'gnt': 'JOERGENSEN'}, 'dob': '1983-01-06', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-05-04', 'co': 'DK', 'is': 'Danish Health Data Authority', 'ci': 'URN:UVCI:01:DK:0EF88044F7935DF2B4A938A38C14C97C#C'}]});
   });
 
 });

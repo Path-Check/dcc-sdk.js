@@ -6,7 +6,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Andaluza Andaluza', 'gn': 'Carmen', 'fnt': 'ANDALUZA<ANDALUZA', 'gnt': 'CARMEN'}, 'dob': '1974-02-28', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'sc': '2021-05-03T14:20:00+00:00', 'dr': '2021-05-03T20:00:01+00:00', 'tr': '260415000', 'tc': 'Hospital Virgen del Rocío', 'co': 'ES', 'is': 'Servicio Andaluz de Salud', 'ci': '01ES01T8D8F19849772480B86DE8#C'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Andaluza Andaluza', 'gn': 'Carmen', 'fnt': 'ANDALUZA<ANDALUZA', 'gnt': 'CARMEN'}, 'dob': '1974-02-28', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'sc': '2021-05-03T14:20:00+00:00', 'dr': '2021-05-03T20:00:01+00:00', 'tr': '260415000', 'tc': 'Hospital Virgen del Rocío', 'co': 'ES', 'is': 'Servicio Andaluz de Salud', 'ci': '01ES01T8D8F19849772480B86DE8#C'}]});
   });
 
   it('should verify ES_2DCode_raw_1101', async () => {
@@ -21,7 +21,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Andaluza Andaluza', 'gn': 'Carmen', 'fnt': 'ANDALUZA<ANDALUZA', 'gnt': 'CARMEN'}, 'dob': '1974-02-28', 'r': [{'tg': '840539006', 'fr': '2021-04-01', 'co': 'ES', 'is': 'Servicio Andaluz de Salud', 'df': '2021-04-12', 'du': '2021-09-28', 'ci': '01ES01RC6A212DD2A6140F2A3F0C#A'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Andaluza Andaluza', 'gn': 'Carmen', 'fnt': 'ANDALUZA<ANDALUZA', 'gnt': 'CARMEN'}, 'dob': '1974-02-28', 'r': [{'tg': '840539006', 'fr': '2021-04-01', 'co': 'ES', 'is': 'Servicio Andaluz de Salud', 'df': '2021-04-12', 'du': '2021-09-28', 'ci': '01ES01RC6A212DD2A6140F2A3F0C#A'}]});
   });
 
   it('should verify ES_2DCode_raw_1002', async () => {
@@ -29,7 +29,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Apellido Apellido', 'fnt': 'APELLIDO<APELLIDO', 'gn': 'Nombre', 'gnt': 'NOMBRE'}, 'dob': '2014-08-16', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'ma': '1218', 'sc': '2020-08-16T00:00:00+02:00', 'dr': '2020-08-18T00:00:00+02:00', 'tr': '260415000', 'tc': 'laboratorio', 'co': 'ES', 'is': '10', 'ci': '01ES10TACD8BEE543F79125E845E#4'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Apellido Apellido', 'fnt': 'APELLIDO<APELLIDO', 'gn': 'Nombre', 'gnt': 'NOMBRE'}, 'dob': '2014-08-16', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'ma': '1218', 'sc': '2020-08-16T00:00:00+02:00', 'dr': '2020-08-18T00:00:00+02:00', 'tr': '260415000', 'tc': 'laboratorio', 'co': 'ES', 'is': '10', 'ci': '01ES10TACD8BEE543F79125E845E#4'}]});
   });
 
   it('should verify ES_2DCode_raw_502', async () => {
@@ -44,7 +44,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'CARRASCO MARTIN', 'fnt': 'CARRASCO<MARTIN', 'gn': 'ANGEL', 'gnt': 'ANGEL'}, 'dob': '1918-03-01', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'sc': '2021-05-14T00:00:00+02:00', 'dr': '2021-05-14T00:00:00+02:00', 'tr': '260415000', 'tc': 'Hospital Clinico Universitario de Valladolid (Vall', 'co': 'ES', 'is': 'Gerencia Regional de Salud de Castilla y León', 'ci': '01ES07T895AA7BF69D99C77DB96B#E'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'CARRASCO MARTIN', 'fnt': 'CARRASCO<MARTIN', 'gn': 'ANGEL', 'gnt': 'ANGEL'}, 'dob': '1918-03-01', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'sc': '2021-05-14T00:00:00+02:00', 'dr': '2021-05-14T00:00:00+02:00', 'tr': '260415000', 'tc': 'Hospital Clinico Universitario de Valladolid (Vall', 'co': 'ES', 'is': 'Gerencia Regional de Salud de Castilla y León', 'ci': '01ES07T895AA7BF69D99C77DB96B#E'}]});
   });
 
   it('should verify ES_2DCode_raw_702', async () => {
@@ -52,7 +52,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'GONZALEZ GILMARTIN', 'fnt': 'GONZALEZ<GILMARTIN', 'gn': 'ALVARO', 'gnt': 'ALVARO'}, 'dob': '1993-08-05', 'r': [{'tg': '840539006', 'fr': '2021-04-01', 'co': 'ES', 'is': 'Gerencia Regional de Salud de Castilla y León', 'df': '2021-04-12', 'du': '2021-09-28', 'ci': '01ES07R6FA4C90B8805C5B10BC5C#5'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'GONZALEZ GILMARTIN', 'fnt': 'GONZALEZ<GILMARTIN', 'gn': 'ALVARO', 'gnt': 'ALVARO'}, 'dob': '1993-08-05', 'r': [{'tg': '840539006', 'fr': '2021-04-01', 'co': 'ES', 'is': 'Gerencia Regional de Salud de Castilla y León', 'df': '2021-04-12', 'du': '2021-09-28', 'ci': '01ES07R6FA4C90B8805C5B10BC5C#5'}]});
   });
 
   it('should verify ES_2DCode_raw_201', async () => {
@@ -74,7 +74,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Romero Muñoz', 'fnt': 'ROMERO<MUNOZ', 'gn': 'José Carlos', 'gnt': 'JOSE<CARLOS'}, 'dob': '2021-05-28', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1525', 'ma': 'ORG-100001417', 'dn': 1, 'sd': 1, 'dt': '2021-05-28', 'co': 'ES', 'is': 'Ministerio de Sanidad', 'ci': '01ES21R1662955121D74217FDD39#0'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Romero Muñoz', 'fnt': 'ROMERO<MUNOZ', 'gn': 'José Carlos', 'gnt': 'JOSE<CARLOS'}, 'dob': '2021-05-28', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1525', 'ma': 'ORG-100001417', 'dn': 1, 'sd': 1, 'dt': '2021-05-28', 'co': 'ES', 'is': 'Ministerio de Sanidad', 'ci': '01ES21R1662955121D74217FDD39#0'}]});
   });
 
   it('should verify ES_2DCode_raw_1003', async () => {
@@ -82,7 +82,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Apellido Apellido', 'fnt': 'APELLIDO<APELLIDO', 'gn': 'Nombre', 'gnt': 'NOMBRE'}, 'dob': '2014-08-16', 'r': [{'tg': '840539006', 'fr': '2020-08-16', 'co': 'ES', 'is': '10', 'df': '2016-08-16', 'du': '2020-08-16', 'ci': '01ES10REC193B8823BA97F084DD0#2'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Apellido Apellido', 'fnt': 'APELLIDO<APELLIDO', 'gn': 'Nombre', 'gnt': 'NOMBRE'}, 'dob': '2014-08-16', 'r': [{'tg': '840539006', 'fr': '2020-08-16', 'co': 'ES', 'is': '10', 'df': '2016-08-16', 'du': '2020-08-16', 'ci': '01ES10REC193B8823BA97F084DD0#2'}]});
   });
 
   it('should verify ES_2DCode_raw_2102', async () => {
@@ -90,7 +90,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Romero Muñoz', 'fnt': 'ROMERO<MUNOZ', 'gn': 'José Carlos', 'gnt': 'JOSE<CARLOS'}, 'dob': '2021-05-28', 'r': [{'tg': '840539006', 'du': '2021-10-04', 'df': '2021-05-10', 'fr': '2021-04-06', 'co': 'ES', 'is': 'Ministerio de Sanidad', 'ci': '01ES21R1662955121D74217FDD29#1'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Romero Muñoz', 'fnt': 'ROMERO<MUNOZ', 'gn': 'José Carlos', 'gnt': 'JOSE<CARLOS'}, 'dob': '2021-05-28', 'r': [{'tg': '840539006', 'du': '2021-10-04', 'df': '2021-05-10', 'fr': '2021-04-06', 'co': 'ES', 'is': 'Ministerio de Sanidad', 'ci': '01ES21R1662955121D74217FDD29#1'}]});
   });
 
   it('should verify ES_2DCode_raw_701', async () => {
@@ -98,7 +98,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'MANJARRES SALAZAR', 'fnt': 'MANJARRES<SALAZAR', 'gn': 'BETTY MARTA', 'gnt': 'BETTY<MARTA'}, 'dob': '1960-01-19', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-04-08', 'co': 'ES', 'is': 'Gerencia Regional de Salud de Castilla y León', 'ci': '01ES07V89AC8B666484995C3F941#D'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'MANJARRES SALAZAR', 'fnt': 'MANJARRES<SALAZAR', 'gn': 'BETTY MARTA', 'gnt': 'BETTY<MARTA'}, 'dob': '1960-01-19', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-04-08', 'co': 'ES', 'is': 'Gerencia Regional de Salud de Castilla y León', 'ci': '01ES07V89AC8B666484995C3F941#D'}]});
   });
 
   it('should verify ES_2DCode_raw_202', async () => {
@@ -127,7 +127,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Apellido Apellido', 'fnt': 'APELLIDO<APELLIDO', 'gn': 'Nombre', 'gnt': 'NOMBRE'}, 'dob': '2014-08-16', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2020-08-16', 'co': 'ES', 'is': '10', 'ci': '01ES10V778A77BC630DCE6AD3EEA#5'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Apellido Apellido', 'fnt': 'APELLIDO<APELLIDO', 'gn': 'Nombre', 'gnt': 'NOMBRE'}, 'dob': '2014-08-16', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2020-08-16', 'co': 'ES', 'is': '10', 'ci': '01ES10V778A77BC630DCE6AD3EEA#5'}]});
   });
 
   it('should verify ES_2DCode_raw_2103', async () => {
@@ -135,7 +135,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Romero Muñoz', 'fnt': 'ROMERO<MUNOZ', 'gn': 'José Carlos', 'gnt': 'JOSE<CARLOS'}, 'dob': '2021-05-28', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'nm': 'Panbio COVID-19 Ag Test', 'sc': '2021-05-10T10:54:34+02:00', 'dr': '2021-05-10T11:09:34+02:00', 'tr': '260415000', 'tc': 'C.S. BARBASTRO', 'ma': '1232', 'co': 'ES', 'is': 'Ministerio de Sanidad', 'ci': '01ES21T1662955521D74217FDD29#D'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Romero Muñoz', 'fnt': 'ROMERO<MUNOZ', 'gn': 'José Carlos', 'gnt': 'JOSE<CARLOS'}, 'dob': '2021-05-28', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'nm': 'Panbio COVID-19 Ag Test', 'sc': '2021-05-10T10:54:34+02:00', 'dr': '2021-05-10T11:09:34+02:00', 'tr': '260415000', 'tc': 'C.S. BARBASTRO', 'ma': '1232', 'co': 'ES', 'is': 'Ministerio de Sanidad', 'ci': '01ES21T1662955521D74217FDD29#D'}]});
   });
 
   it('should verify ES_2DCode_raw_101', async () => {
@@ -143,7 +143,7 @@ describe('ES', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Andaluza Andaluza', 'gn': 'Carmen', 'fnt': 'ANDALUZA<ANDALUZA', 'gnt': 'CARMEN'}, 'dob': '1974-02-28', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-04-21', 'co': 'ES', 'is': 'Servicio Andaluz de Salud', 'ci': '01ES01V1254A083DEF342D693992#9'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Andaluza Andaluza', 'gn': 'Carmen', 'fnt': 'ANDALUZA<ANDALUZA', 'gnt': 'CARMEN'}, 'dob': '1974-02-28', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-04-21', 'co': 'ES', 'is': 'Servicio Andaluz de Salud', 'ci': '01ES01V1254A083DEF342D693992#9'}]});
   });
 
   it('should verify ES_2DCode_raw_1102', async () => {

@@ -6,7 +6,7 @@ describe('FR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Dupond', 'fnt': 'DUPOND', 'gn': 'Marie', 'gnt': 'MARIE'}, 'dob': '1962-07-01', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': '2019-nCoV RT-qPCR', 'ma': '1232', 'sc': '2021-05-16T14:34:56Z', 'dr': '2021-05-17T14:45:01Z', 'tr': '260415000', 'tc': 'Testing Centre', 'co': 'FR', 'is': 'Laboratory', 'ci': 'URN:UVCI:V1:FR:P50E914L54CIP5J0K4EHSCXOS:'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Dupond', 'fnt': 'DUPOND', 'gn': 'Marie', 'gnt': 'MARIE'}, 'dob': '1962-07-01', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': '2019-nCoV RT-qPCR', 'ma': '1232', 'sc': '2021-05-16T14:34:56Z', 'dr': '2021-05-17T14:45:01Z', 'tr': '260415000', 'tc': 'Testing Centre', 'co': 'FR', 'is': 'Laboratory', 'ci': 'URN:UVCI:V1:FR:P50E914L54CIP5J0K4EHSCXOS:'}]});
   });
 
   it('should verify FR_2DCode_raw_vaccin_ok', async () => {
@@ -14,7 +14,7 @@ describe('FR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Dupond', 'fnt': 'DUPOND', 'gn': 'Marie', 'gnt': 'MARIE'}, 'dob': '1962-07-01', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1507', 'ma': 'ORG-100031184', 'dn': 2, 'sd': 2, 'dt': '2021-01-05', 'co': 'FR', 'is': 'IN', 'ci': 'dgci:V1:FR:C51AOQW7CQMFW7WLIWVGADQY6:70'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Dupond', 'fnt': 'DUPOND', 'gn': 'Marie', 'gnt': 'MARIE'}, 'dob': '1962-07-01', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1507', 'ma': 'ORG-100031184', 'dn': 2, 'sd': 2, 'dt': '2021-01-05', 'co': 'FR', 'is': 'IN', 'ci': 'dgci:V1:FR:C51AOQW7CQMFW7WLIWVGADQY6:70'}]});
   });
 
   it('should verify FR_2DCode_raw_recovery_ok', async () => {
@@ -22,7 +22,7 @@ describe('FR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Dupond', 'fnt': 'DUPOND', 'gn': 'Marie', 'gnt': 'MARIE'}, 'dob': '1962-07-01', 'r': [{'tg': '840539006', 'fr': '2021-05-02', 'co': 'FR', 'is': 'Laboratory', 'df': '2021-05-02', 'du': '2023-05-02', 'ci': 'dgci:V1:FR:ME8M4JGYO2UKFHKKMQO8KW9QP:36'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Dupond', 'fnt': 'DUPOND', 'gn': 'Marie', 'gnt': 'MARIE'}, 'dob': '1962-07-01', 'r': [{'tg': '840539006', 'fr': '2021-05-02', 'co': 'FR', 'is': 'Laboratory', 'df': '2021-05-02', 'du': '2023-05-02', 'ci': 'dgci:V1:FR:ME8M4JGYO2UKFHKKMQO8KW9QP:36'}]});
   });
 
 });

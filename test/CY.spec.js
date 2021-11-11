@@ -6,7 +6,7 @@ describe('CY', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Miguel', 'fnt': 'MIGUEL', 'gn': 'Francisco', 'gnt': 'FRANCISCO'}, 'dob': '1990-01-09', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100001699', 'dn': 2, 'sd': 2, 'dt': '2021-06-02', 'co': 'CY', 'is': 'Ministry of Health', 'ci': 'dgci:V1:CY:IR9L8I84HFLFPNISN548LJIXJ:30'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Miguel', 'fnt': 'MIGUEL', 'gn': 'Francisco', 'gnt': 'FRANCISCO'}, 'dob': '1990-01-09', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100001699', 'dn': 2, 'sd': 2, 'dt': '2021-06-02', 'co': 'CY', 'is': 'Ministry of Health', 'ci': 'dgci:V1:CY:IR9L8I84HFLFPNISN548LJIXJ:30'}]});
   });
 
   it('should verify CY_2DCode_raw_7', async () => {
@@ -14,7 +14,7 @@ describe('CY', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Garcia Miguel', 'fnt': 'GARCIA<MIGUEL', 'gn': 'Francisco', 'gnt': 'FRANCISCO'}, 'dob': '1990-01-10', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'COVID19NAA', 'ma': '1304', 'sc': '2021-06-07T10:00:00.110Z', 'dr': '2021-06-07T10:30:00.701Z', 'tr': '260415000', 'tc': 'Testing center 1', 'co': 'CY', 'is': 'Ministry of Health', 'ci': 'URN:UVCI:V1:CY:PYE1LE1O2X54P5845G8RRMM9JE'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Garcia Miguel', 'fnt': 'GARCIA<MIGUEL', 'gn': 'Francisco', 'gnt': 'FRANCISCO'}, 'dob': '1990-01-10', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'COVID19NAA', 'ma': '1304', 'sc': '2021-06-07T10:00:00.110Z', 'dr': '2021-06-07T10:30:00.701Z', 'tr': '260415000', 'tc': 'Testing center 1', 'co': 'CY', 'is': 'Ministry of Health', 'ci': 'URN:UVCI:V1:CY:PYE1LE1O2X54P5845G8RRMM9JE'}]});
   });
 
   it('should verify CY_2DCode_raw_8', async () => {
@@ -22,7 +22,7 @@ describe('CY', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Karaoli', 'fnt': 'KARAOLI', 'gn': 'Anastasia', 'gnt': 'ANASTASIA'}, 'dob': '1990-01-23', 'r': [{'tg': '840539006', 'fr': '2021-05-02', 'co': 'CY', 'is': 'Ministry of Health', 'df': '2021-06-02', 'du': '2021-12-02', 'ci': 'dgci:V1:CY:JDXP4L47UVVWHJMFBIJIGWNO6:44'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Karaoli', 'fnt': 'KARAOLI', 'gn': 'Anastasia', 'gnt': 'ANASTASIA'}, 'dob': '1990-01-23', 'r': [{'tg': '840539006', 'fr': '2021-05-02', 'co': 'CY', 'is': 'Ministry of Health', 'df': '2021-06-02', 'du': '2021-12-02', 'ci': 'dgci:V1:CY:JDXP4L47UVVWHJMFBIJIGWNO6:44'}]});
   });
 
   it('should verify CY_2DCode_raw_5', async () => {
@@ -30,7 +30,7 @@ describe('CY', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Miguel', 'fnt': 'MIGUEL', 'gn': 'Francisco', 'gnt': 'FRANCISCO'}, 'dob': '1990-01-09', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100001699', 'dn': 1, 'sd': 2, 'dt': '2021-06-02', 'co': 'CY', 'is': 'Ministry of Health', 'ci': 'dgci:V1:CY:GRHC8O6ECPWMUM16D3WAXOPN4:89'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Miguel', 'fnt': 'MIGUEL', 'gn': 'Francisco', 'gnt': 'FRANCISCO'}, 'dob': '1990-01-09', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100001699', 'dn': 1, 'sd': 2, 'dt': '2021-06-02', 'co': 'CY', 'is': 'Ministry of Health', 'ci': 'dgci:V1:CY:GRHC8O6ECPWMUM16D3WAXOPN4:89'}]});
   });
 
 });

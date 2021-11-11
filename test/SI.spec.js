@@ -6,7 +6,7 @@ describe('SI', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Vzorčekš', 'fnt': 'VZORCEKS', 'gn': 'Špelca', 'gnt': 'SPELCA'}, 'dob': '1958-11-11', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1507', 'ma': 'ORG-100031184', 'dn': 2, 'sd': 2, 'dt': '2021-05-11', 'co': 'SI', 'is': 'National Institute of Public Health', 'ci': 'urn:uvci:01:SI:NIJZ00000000468'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Vzorčekš', 'fnt': 'VZORCEKS', 'gn': 'Špelca', 'gnt': 'SPELCA'}, 'dob': '1958-11-11', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1507', 'ma': 'ORG-100031184', 'dn': 2, 'sd': 2, 'dt': '2021-05-11', 'co': 'SI', 'is': 'National Institute of Public Health', 'ci': 'urn:uvci:01:SI:NIJZ00000000468'}]});
   });
 
   it('should verify SI_2DCode_raw_2', async () => {
@@ -15,7 +15,7 @@ describe('SI', async () => {
     
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Vzorčekš', 'fnt': 'VZORCEKS', 'gn': 'Špelca', 'gnt': 'SPELCA'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'sc': new Date('2021-06-07T17:24:36.798354Z'), 'tr': '260415000', 'tc': 'Zdravstveni dom Škofja Loka', 'co': 'SI', 'is': 'National Institute of Public Health', 'ci': 'URN:UVCI:01:SI:EHM/TARN89875439877'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Vzorčekš', 'fnt': 'VZORCEKS', 'gn': 'Špelca', 'gnt': 'SPELCA'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'sc': new Date('2021-06-07T17:24:36.798354Z'), 'tr': '260415000', 'tc': 'Zdravstveni dom Škofja Loka', 'co': 'SI', 'is': 'National Institute of Public Health', 'ci': 'URN:UVCI:01:SI:EHM/TARN89875439877'}]});
   });
 
   it('should verify SI_2DCode_raw_3', async () => {
@@ -23,7 +23,7 @@ describe('SI', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Vzorčekš', 'fnt': 'VZORCEKS', 'gn': 'Špelca', 'gnt': 'SPELCA'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'sc': '2021-06-07T17:24:36.798354Z', 'tr': '260415000', 'tc': 'Zdravstveni dom Škofja Loka', 'co': 'SI', 'is': 'National Institute of Public Health', 'ci': 'URN:UVCI:01:SI:EHM/TARN89875439877'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Vzorčekš', 'fnt': 'VZORCEKS', 'gn': 'Špelca', 'gnt': 'SPELCA'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'sc': '2021-06-07T17:24:36.798354Z', 'tr': '260415000', 'tc': 'Zdravstveni dom Škofja Loka', 'co': 'SI', 'is': 'National Institute of Public Health', 'ci': 'URN:UVCI:01:SI:EHM/TARN89875439877'}]});
   });
 
   it('should verify SI_2DCode_raw_4', async () => {
@@ -31,7 +31,7 @@ describe('SI', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Vzorčekš', 'fnt': 'VZORCEKS', 'gn': 'Špelca', 'gnt': 'SPELCA'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'ma': '1232', 'sc': new Date('2021-06-07T15:53:37.259Z'), 'tr': '260415000', 'tc': 'Medicinski center Testira', 'co': 'SI', 'is': 'National Institute of Public Health', 'ci': 'URN:UVCI:01:SI:EHM/TSTAX67554312'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Vzorčekš', 'fnt': 'VZORCEKS', 'gn': 'Špelca', 'gnt': 'SPELCA'}, 'dob': '1958-11-11', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'ma': '1232', 'sc': new Date('2021-06-07T15:53:37.259Z'), 'tr': '260415000', 'tc': 'Medicinski center Testira', 'co': 'SI', 'is': 'National Institute of Public Health', 'ci': 'URN:UVCI:01:SI:EHM/TSTAX67554312'}]});
   });
 
   it('should verify SI_2DCode_raw_5', async () => {
@@ -39,7 +39,7 @@ describe('SI', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Vzorčekš', 'fnt': 'VZORCEKS', 'gn': 'Špelca', 'gnt': 'SPELCA'}, 'dob': '1958-11-11', 'r': [{'tg': '840539006', 'fr': '2021-05-27', 'co': 'SI', 'is': 'National Institute of Public Health', 'df': '2021-06-07', 'du': '2021-09-05', 'ci': 'URN:UVCI:01:SI:EHM/R987765321'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Vzorčekš', 'fnt': 'VZORCEKS', 'gn': 'Špelca', 'gnt': 'SPELCA'}, 'dob': '1958-11-11', 'r': [{'tg': '840539006', 'fr': '2021-05-27', 'co': 'SI', 'is': 'National Institute of Public Health', 'df': '2021-06-07', 'du': '2021-09-05', 'ci': 'URN:UVCI:01:SI:EHM/R987765321'}]});
   });
 
 });

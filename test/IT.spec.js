@@ -6,7 +6,7 @@ describe('IT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Di Caprio', 'fnt': 'DI<CAPRIO', 'gn': 'Marilù Teresa', 'gnt': 'MARILU<TERESA'}, 'dob': '1977-06-16', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-04-10', 'co': 'IT', 'is': 'IT', 'ci': '01ITE7300E1AB2A84C719004F103DCB1F70A#6'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Di Caprio', 'fnt': 'DI<CAPRIO', 'gn': 'Marilù Teresa', 'gnt': 'MARILU<TERESA'}, 'dob': '1977-06-16', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-04-10', 'co': 'IT', 'is': 'IT', 'ci': '01ITE7300E1AB2A84C719004F103DCB1F70A#6'}]});
   });
 
   it('should verify IT_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('IT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Di Caprio', 'fnt': 'DI<CAPRIO', 'gn': 'Marilù Teresa', 'gnt': 'MARILU<TERESA'}, 'dob': '1977-06-16', 'r': [{'tg': '840539006', 'fr': '2021-05-02', 'co': 'IT', 'is': 'IT', 'df': '2021-05-04', 'du': '2021-10-31', 'ci': '01ITA65E2BD36C9E4900B0273D2E7C92EEB9#1'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Di Caprio', 'fnt': 'DI<CAPRIO', 'gn': 'Marilù Teresa', 'gnt': 'MARILU<TERESA'}, 'dob': '1977-06-16', 'r': [{'tg': '840539006', 'fr': '2021-05-02', 'co': 'IT', 'is': 'IT', 'df': '2021-05-04', 'du': '2021-10-31', 'ci': '01ITA65E2BD36C9E4900B0273D2E7C92EEB9#1'}]});
   });
 
   it('should verify IT_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('IT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Di Caprio', 'fnt': 'DI<CAPRIO', 'gn': 'Marilù Teresa', 'gnt': 'MARILU<TERESA'}, 'dob': '1977-06-16', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'ma': '1232', 'sc': '2021-05-03T10:27:15Z', 'dr': '2021-05-11T12:27:15Z', 'tr': '260415000', 'tc': 'Policlinico Umberto I', 'co': 'IT', 'is': 'IT', 'ci': '01IT053059F7676042D9BEE9F874C4901F9B#3'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Di Caprio', 'fnt': 'DI<CAPRIO', 'gn': 'Marilù Teresa', 'gnt': 'MARILU<TERESA'}, 'dob': '1977-06-16', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'ma': '1232', 'sc': '2021-05-03T10:27:15Z', 'dr': '2021-05-11T12:27:15Z', 'tr': '260415000', 'tc': 'Policlinico Umberto I', 'co': 'IT', 'is': 'IT', 'ci': '01IT053059F7676042D9BEE9F874C4901F9B#3'}]});
   });
 
   it('should verify IT_2DCode_raw_4', async () => {
@@ -30,7 +30,7 @@ describe('IT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Di Caprio', 'fnt': 'DI<CAPRIO', 'gn': 'Marilù Teresa', 'gnt': 'MARILU<TERESA'}, 'dob': '1977-06-16', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'ma': '', 'sc': '2021-05-10T10:27:15Z', 'dr': '2021-05-11T12:27:15Z', 'tr': '260415000', 'tc': 'Policlinico Umberto I', 'co': 'IT', 'is': 'IT', 'ci': '01IT0BFC9866D3854EAC82C21654B6F6DE32#1'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Di Caprio', 'fnt': 'DI<CAPRIO', 'gn': 'Marilù Teresa', 'gnt': 'MARILU<TERESA'}, 'dob': '1977-06-16', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'Roche LightCycler qPCR', 'ma': '', 'sc': '2021-05-10T10:27:15Z', 'dr': '2021-05-11T12:27:15Z', 'tr': '260415000', 'tc': 'Policlinico Umberto I', 'co': 'IT', 'is': 'IT', 'ci': '01IT0BFC9866D3854EAC82C21654B6F6DE32#1'}]});
   });
 
 });

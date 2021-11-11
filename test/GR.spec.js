@@ -6,7 +6,7 @@ describe('GR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Μάριος', 'fnt': 'MARIOS', 'gn': 'Μενεξές', 'gnt': 'MENEKSES'}, 'dob': '1959-10-12', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-01-21', 'co': 'GR', 'is': 'Ministry of Health', 'ci': 'urn:uvci:01:GR:78J239D5#2'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Μάριος', 'fnt': 'MARIOS', 'gn': 'Μενεξές', 'gnt': 'MENEKSES'}, 'dob': '1959-10-12', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-01-21', 'co': 'GR', 'is': 'Ministry of Health', 'ci': 'urn:uvci:01:GR:78J239D5#2'}]});
   });
 
   it('should verify GR_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('GR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Μάριος', 'fnt': 'MARIOS', 'gn': 'Μενεξές', 'gnt': 'MENEKSES'}, 'dob': '1959-10-12', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-01-21', 'co': 'GR', 'is': 'Ministry of Health', 'ci': 'urn:uvci:01:GR:78J239D6#2'}, {'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-02-21', 'co': 'GR', 'is': 'Ministry of Health', 'ci': 'urn:uvci:01:GR:78J239D6#2'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Μάριος', 'fnt': 'MARIOS', 'gn': 'Μενεξές', 'gnt': 'MENEKSES'}, 'dob': '1959-10-12', 'v': [{'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-01-21', 'co': 'GR', 'is': 'Ministry of Health', 'ci': 'urn:uvci:01:GR:78J239D6#2'}, {'tg': '840539006', 'vp': 'J07BX03', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-02-21', 'co': 'GR', 'is': 'Ministry of Health', 'ci': 'urn:uvci:01:GR:78J239D6#2'}]});
   });
 
   it('should verify GR_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('GR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Μάριος', 'fnt': 'MARIOS', 'gn': 'Μενεξές', 'gnt': 'MENEKSES'}, 'dob': '1959-10-12', 'r': [{'tg': '840539006', 'fr': '2021-03-20', 'co': 'GR', 'is': 'Ministry of Health', 'df': '2021-05-20', 'du': '2021-11-20', 'ci': 'urn:uvci:01:GR:D9J4238C5'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Μάριος', 'fnt': 'MARIOS', 'gn': 'Μενεξές', 'gnt': 'MENEKSES'}, 'dob': '1959-10-12', 'r': [{'tg': '840539006', 'fr': '2021-03-20', 'co': 'GR', 'is': 'Ministry of Health', 'df': '2021-05-20', 'du': '2021-11-20', 'ci': 'urn:uvci:01:GR:D9J4238C5'}]});
   });
 
   it('should verify GR_2DCode_raw_4', async () => {
@@ -30,7 +30,7 @@ describe('GR', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Μάριος', 'fnt': 'MARIOS', 'gn': 'Μενεξές', 'gnt': 'MENEKSES'}, 'dob': '1959-10-12', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'sc': '2021-05-20T10:05:32Z', 'dr': '2021-05-20T15:35:07Z', 'tr': '260415000', 'tc': 'Central Athens Testing Center', 'co': 'GR', 'is': 'Ministry of Health', 'ci': 'urn:uvci:01:GR:9X5D838D5'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Μάριος', 'fnt': 'MARIOS', 'gn': 'Μενεξές', 'gnt': 'MENEKSES'}, 'dob': '1959-10-12', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'sc': '2021-05-20T10:05:32Z', 'dr': '2021-05-20T15:35:07Z', 'tr': '260415000', 'tc': 'Central Athens Testing Center', 'co': 'GR', 'is': 'Ministry of Health', 'ci': 'urn:uvci:01:GR:9X5D838D5'}]});
   });
 
 });

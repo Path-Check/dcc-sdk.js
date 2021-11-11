@@ -6,7 +6,7 @@ describe('PT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pedro Pereira', 'gn': 'José', 'fnt': 'PEDRO<PEREIRA', 'gnt': 'JOSE'}, 'dob': '1985-07-13', 'v': [{'tg': '840539006', 'co': 'PT', 'is': 'DGS', 'ci': 'urn:uvci:01/PT/SPMS/TRC01234567890123456#1', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-02-18'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pedro Pereira', 'gn': 'José', 'fnt': 'PEDRO<PEREIRA', 'gnt': 'JOSE'}, 'dob': '1985-07-13', 'v': [{'tg': '840539006', 'co': 'PT', 'is': 'DGS', 'ci': 'urn:uvci:01/PT/SPMS/TRC01234567890123456#1', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-02-18'}]});
   });
 
   it('should verify PT_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('PT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pedro Pereira', 'gn': 'José', 'fnt': 'PEDRO<PEREIRA', 'gnt': 'JOSE'}, 'dob': '1985-07-13', 'v': [{'tg': '840539006', 'co': 'PT', 'is': 'DGS', 'ci': 'urn:uvci:01/PT/SPMS/TRC01234567890123456#1', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-02-18'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pedro Pereira', 'gn': 'José', 'fnt': 'PEDRO<PEREIRA', 'gnt': 'JOSE'}, 'dob': '1985-07-13', 'v': [{'tg': '840539006', 'co': 'PT', 'is': 'DGS', 'ci': 'urn:uvci:01/PT/SPMS/TRC01234567890123456#1', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-02-18'}]});
   });
 
   it('should verify PT_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('PT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pedro Pereira', 'gn': 'José', 'fnt': 'PEDRO<PEREIRA', 'gnt': 'JOSE'}, 'dob': '1985-07-13', 'r': [{'ci': 'urn:uvci:01/PT/SPMS/VCC01234567890123456#2', 'is': 'DGS', 'co': 'PT', 'tg': '840539006', 'fr': '2021-02-20', 'df': '2021-04-04', 'du': '2021-10-04'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pedro Pereira', 'gn': 'José', 'fnt': 'PEDRO<PEREIRA', 'gnt': 'JOSE'}, 'dob': '1985-07-13', 'r': [{'ci': 'urn:uvci:01/PT/SPMS/VCC01234567890123456#2', 'is': 'DGS', 'co': 'PT', 'tg': '840539006', 'fr': '2021-02-20', 'df': '2021-04-04', 'du': '2021-10-04'}]});
   });
 
   it('should verify PT_2DCode_raw_4', async () => {
@@ -30,7 +30,7 @@ describe('PT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pedro Pereira', 'gn': 'José', 'fnt': 'PEDRO<PEREIRA', 'gnt': 'JOSE'}, 'dob': '1985-07-13', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'tr': '260415000', 'nm': 'Roche LightCycler qPCR', 'sc': '2021-02-20T12:34:56Z', 'dr': '2021-02-20T14:56:01Z', 'tc': 'CRC Valongo', 'co': 'PT', 'is': 'DGS', 'ci': 'urn:uvci:01/PT/SPMS/TRC01234567890123456#1', 'ma': '1232'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pedro Pereira', 'gn': 'José', 'fnt': 'PEDRO<PEREIRA', 'gnt': 'JOSE'}, 'dob': '1985-07-13', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'tr': '260415000', 'nm': 'Roche LightCycler qPCR', 'sc': '2021-02-20T12:34:56Z', 'dr': '2021-02-20T14:56:01Z', 'tc': 'CRC Valongo', 'co': 'PT', 'is': 'DGS', 'ci': 'urn:uvci:01/PT/SPMS/TRC01234567890123456#1', 'ma': '1232'}]});
   });
 
   it('should verify PT_2DCode_raw_5', async () => {
@@ -38,7 +38,7 @@ describe('PT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pedro Pereira', 'gn': 'José', 'fnt': 'PEDRO<PEREIRA', 'gnt': 'JOSE'}, 'dob': '1985-07-13', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'tr': '260415000', 'ma': '1232', 'sc': '2021-02-20T12:34:56Z', 'dr': '2021-02-20T12:45:01Z', 'tc': 'CRC Valongo', 'co': 'PT', 'is': 'DGS', 'ci': 'urn:uvci:01/PT/SPMS/TRC01234567890123456#1'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pedro Pereira', 'gn': 'José', 'fnt': 'PEDRO<PEREIRA', 'gnt': 'JOSE'}, 'dob': '1985-07-13', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'tr': '260415000', 'ma': '1232', 'sc': '2021-02-20T12:34:56Z', 'dr': '2021-02-20T12:45:01Z', 'tc': 'CRC Valongo', 'co': 'PT', 'is': 'DGS', 'ci': 'urn:uvci:01/PT/SPMS/TRC01234567890123456#1'}]});
   });
 
 });

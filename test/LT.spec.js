@@ -6,7 +6,7 @@ describe('LT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pavardenytė-Pavardenė', 'fnt': 'PAVARDENYTE<PAVARDENE', 'gn': 'Birutė-Marija', 'gnt': 'BIRUTE<MARIJA'}, 'dob': '2000-10-03', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-04-21', 'co': 'LT', 'is': 'Ministry of Health of The Republic of Lithuania', 'ci': 'URN:UVCI:01:LT:00034343989123'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pavardenytė-Pavardenė', 'fnt': 'PAVARDENYTE<PAVARDENE', 'gn': 'Birutė-Marija', 'gnt': 'BIRUTE<MARIJA'}, 'dob': '2000-10-03', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 2, 'sd': 2, 'dt': '2021-04-21', 'co': 'LT', 'is': 'Ministry of Health of The Republic of Lithuania', 'ci': 'URN:UVCI:01:LT:00034343989123'}]});
   });
 
   it('should verify LT_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('LT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pavardenytė-Pavardenė', 'fnt': 'PAVARDENYTE<PAVARDENE', 'gn': 'Birutė-Marija', 'gnt': 'BIRUTE<MARIJA'}, 'dob': '2000-10-03', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'SARS-COV-2 diagnostika', 'sc': '2021-04-13T14:20:00.000Z', 'tr': '260415000', 'tc': 'Viešoji įstaiga Kauno miesto greitosios medicin...', 'co': 'LT', 'is': 'Ministry of Health of The Republic of Lithuania', 'ci': 'URN:UVCI:01:LT:9834759845'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pavardenytė-Pavardenė', 'fnt': 'PAVARDENYTE<PAVARDENE', 'gn': 'Birutė-Marija', 'gnt': 'BIRUTE<MARIJA'}, 'dob': '2000-10-03', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'SARS-COV-2 diagnostika', 'sc': '2021-04-13T14:20:00.000Z', 'tr': '260415000', 'tc': 'Viešoji įstaiga Kauno miesto greitosios medicin...', 'co': 'LT', 'is': 'Ministry of Health of The Republic of Lithuania', 'ci': 'URN:UVCI:01:LT:9834759845'}]});
   });
 
   it('should verify LT_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('LT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pavardenytė-Pavardenė', 'fnt': 'PAVARDENYTE<PAVARDENE', 'gn': 'Birutė-Marija', 'gnt': 'BIRUTE<MARIJA'}, 'dob': '2000-10-03', 'r': [{'tg': '840539006', 'fr': '2021-02-01', 'co': 'LT', 'is': 'Ministry of Health of The Republic of Lithuania', 'df': '2021-02-20', 'du': '2021-07-20', 'ci': 'URN:UVCI:01:LT:7493438573'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Pavardenytė-Pavardenė', 'fnt': 'PAVARDENYTE<PAVARDENE', 'gn': 'Birutė-Marija', 'gnt': 'BIRUTE<MARIJA'}, 'dob': '2000-10-03', 'r': [{'tg': '840539006', 'fr': '2021-02-01', 'co': 'LT', 'is': 'Ministry of Health of The Republic of Lithuania', 'df': '2021-02-20', 'du': '2021-07-20', 'ci': 'URN:UVCI:01:LT:7493438573'}]});
   });
 
 });

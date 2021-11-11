@@ -40,7 +40,7 @@ describe('Base45', function() {
     const signed = await signAndPack(cwt, PUBLIC_KEY_PEM, PRIVATE_KEY_P8);
     const result = await unpackAndVerify(signed);
 
-    expect(await parseCWT(result)).to.eql(TEST_PAYLOAD);
+    expect(await parseCWT(result.credential)).to.eql(TEST_PAYLOAD);
   });
 
   it('should Verify a CH Payload', async () => {

@@ -6,7 +6,7 @@ describe('IE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.4', 'nam': {'fn': 'Bloggs', 'fnt': 'BLOGGS', 'gn': 'Jane', 'gnt': 'JANE'}, 'dob': '1988-06-07', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-05-06', 'co': 'IE', 'is': 'HSE', 'ci': 'URN:UVCI:01:IE:52d0dc929c884cf8998a7987f0b9d863#2'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.4', 'nam': {'fn': 'Bloggs', 'fnt': 'BLOGGS', 'gn': 'Jane', 'gnt': 'JANE'}, 'dob': '1988-06-07', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-05-06', 'co': 'IE', 'is': 'HSE', 'ci': 'URN:UVCI:01:IE:52d0dc929c884cf8998a7987f0b9d863#2'}]});
   });
 
   it('should verify IE_2DCode_Raw_2', async () => {
@@ -14,7 +14,7 @@ describe('IE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.4', 'nam': {'fn': 'Bloggs', 'fnt': 'BLOGGS', 'gn': 'Jane', 'gnt': 'JANE'}, 'dob': '1988-06-07', 't': [{'tg': '840539006', 'tt': 'COVID-19 test', 'ma': '1232', 'sc': '2021-06-05T00:00:00+02:00', 'dr': '2021-06-06T00:00:00+02:00', 'tr': '260415000', 'tc': 'HSE', 'co': 'IE', 'is': 'HSE', 'ci': 'URN:UVCI:01:IE:ec0a43b89c984e379493c27aa456c04c#J'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.4', 'nam': {'fn': 'Bloggs', 'fnt': 'BLOGGS', 'gn': 'Jane', 'gnt': 'JANE'}, 'dob': '1988-06-07', 't': [{'tg': '840539006', 'tt': 'COVID-19 test', 'ma': '1232', 'sc': '2021-06-05T00:00:00+02:00', 'dr': '2021-06-06T00:00:00+02:00', 'tr': '260415000', 'tc': 'HSE', 'co': 'IE', 'is': 'HSE', 'ci': 'URN:UVCI:01:IE:ec0a43b89c984e379493c27aa456c04c#J'}]});
   });
 
   it('should verify IE_2DCode_Raw_3', async () => {
@@ -22,7 +22,7 @@ describe('IE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.4', 'nam': {'fn': 'Bloggs', 'fnt': 'BLOGGS', 'gn': 'Jane', 'gnt': 'JANE'}, 'dob': '1988-06-07', 't': [{'tg': '840539006', 'tt': 'COVID-19 test', 'nm': 'NAA test', 'sc': '2021-06-05T00:00:00+02:00', 'dr': '2021-06-06T00:00:00+02:00', 'tr': '260415000', 'tc': 'HSE', 'co': 'IE', 'is': 'HSE', 'ci': 'URN:UVCI:01:IE:1eb24cba367a40e0ae559013ad87523c#D'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.4', 'nam': {'fn': 'Bloggs', 'fnt': 'BLOGGS', 'gn': 'Jane', 'gnt': 'JANE'}, 'dob': '1988-06-07', 't': [{'tg': '840539006', 'tt': 'COVID-19 test', 'nm': 'NAA test', 'sc': '2021-06-05T00:00:00+02:00', 'dr': '2021-06-06T00:00:00+02:00', 'tr': '260415000', 'tc': 'HSE', 'co': 'IE', 'is': 'HSE', 'ci': 'URN:UVCI:01:IE:1eb24cba367a40e0ae559013ad87523c#D'}]});
   });
 
   it('should verify IE_2DCode_Raw_4', async () => {
@@ -30,7 +30,7 @@ describe('IE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.4', 'nam': {'fn': 'Bloggs', 'fnt': 'BLOGGS', 'gn': 'Jane', 'gnt': 'JANE'}, 'dob': '1988-06-07', 'r': [{'tg': '840539006', 'fr': '2021-05-17', 'co': 'IE', 'is': 'HSE', 'df': '2021-05-28', 'du': '2021-08-26', 'ci': 'URN:UVCI:01:IE:f1c118c9fd994b7c8e28eeffdb3f41b0#N'}]});
+    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.4', 'nam': {'fn': 'Bloggs', 'fnt': 'BLOGGS', 'gn': 'Jane', 'gnt': 'JANE'}, 'dob': '1988-06-07', 'r': [{'tg': '840539006', 'fr': '2021-05-17', 'co': 'IE', 'is': 'HSE', 'df': '2021-05-28', 'du': '2021-08-26', 'ci': 'URN:UVCI:01:IE:f1c118c9fd994b7c8e28eeffdb3f41b0#N'}]});
   });
 
 });

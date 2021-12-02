@@ -101,6 +101,13 @@ const qrUri = await signAndPack(await makeCWT(TEST_PAYLOAD), PUBLIC_KEY_PEM, PRI
 And call the unpack and verify to convert the URI into the payload: 
 
 ```js
+var cachedCerts = {}
+
+// Load the testing certificates into the local registry.
+cachedCerts["Rjene8QvRwA="] = "MIIBYDCCAQYCEQCAG8uscdLb0ppaneNN5sB7MAoGCCqGSM49BAMCMDIxIzAhBgNVBAMMGk5hdGlvbmFsIENTQ0Egb2YgRnJpZXNsYW5kMQswCQYDVQQGEwJGUjAeFw0yMTA0MjcyMDQ3MDVaFw0yNjAzMTIyMDQ3MDVaMDYxJzAlBgNVBAMMHkRTQyBudW1iZXIgd29ya2VyIG9mIEZyaWVzbGFuZDELMAkGA1UEBhMCRlIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARkJeqyO85dyR+UrQ5Ey8EdgLyf9NtsCrwORAj6T68/elL19aoISQDbzaNYJjdD77XdHtd+nFGTQVpB88wPTwgbMAoGCCqGSM49BAMCA0gAMEUCIQDvDacGFQO3tuATpoqf40CBv09nfglL3wh5wBwA1uA7lAIgZ4sOK2iaaTsFNqENAF7zi+d862ePRQ9Lwymr7XfwVm0="
+
+DCC.addCachedCerts(cachedCerts)
+
 const payload = await unpackAndVerify(qrUri);
 ```
 

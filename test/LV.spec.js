@@ -6,7 +6,7 @@ describe('LV', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ogle', 'fnt': 'OGLE', 'gn': 'Gunārs', 'gnt': 'GUNARS'}, 'dob': '2008-11-08', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-05-25', 'co': 'LV', 'is': 'Nacionālais veselības dienests', 'ci': 'urn:uvci:01:lv:9ad7d5486eca5bcbc0b502e97bd81186'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Ogle', 'fnt': 'OGLE', 'gn': 'Gunārs', 'gnt': 'GUNARS'}, 'dob': '2008-11-08', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-05-25', 'co': 'LV', 'is': 'Nacionālais veselības dienests', 'ci': 'urn:uvci:01:lv:9ad7d5486eca5bcbc0b502e97bd81186'}]});
   });
 
   it('should verify LV_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('LV', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Darbiņš', 'fnt': 'DARBINS', 'gn': 'Kalvis', 'gnt': 'KALVIS'}, 'dob': '1974-01-04', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': '1copy COVID-19 qPCR Kit', 'ma': '1drop Inc', 'sc': '2021-06-02T02:25:00Z', 'dr': '2021-06-02T03:45:00Z', 'tr': '260373001', 'tc': 'NVD', 'co': 'LV', 'is': 'Nacionālais veselības dienests', 'ci': 'urn:uvci:01:lv:39d9da8d15e39b93a68b3e095f4f56d9'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Darbiņš', 'fnt': 'DARBINS', 'gn': 'Kalvis', 'gnt': 'KALVIS'}, 'dob': '1974-01-04', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': '1copy COVID-19 qPCR Kit', 'ma': '1drop Inc', 'sc': '2021-06-02T02:25:00Z', 'dr': '2021-06-02T03:45:00Z', 'tr': '260373001', 'tc': 'NVD', 'co': 'LV', 'is': 'Nacionālais veselības dienests', 'ci': 'urn:uvci:01:lv:39d9da8d15e39b93a68b3e095f4f56d9'}]});
   });
 
   it('should verify LV_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('LV', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Tene', 'fnt': 'TENE', 'gn': 'Sandra', 'gnt': 'SANDRA'}, 'dob': '1961-03-08', 'r': [{'tg': '840539006', 'fr': '2020-12-15', 'co': 'LV', 'is': 'Nacionālais veselības dienests', 'df': '2020-12-26', 'du': '2021-06-13', 'ci': 'urn:uvci:01:lv:71a307447b0055e47c2d9c3a274e6188'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Tene', 'fnt': 'TENE', 'gn': 'Sandra', 'gnt': 'SANDRA'}, 'dob': '1961-03-08', 'r': [{'tg': '840539006', 'fr': '2020-12-15', 'co': 'LV', 'is': 'Nacionālais veselības dienests', 'df': '2020-12-26', 'du': '2021-06-13', 'ci': 'urn:uvci:01:lv:71a307447b0055e47c2d9c3a274e6188'}]});
   });
 
 });

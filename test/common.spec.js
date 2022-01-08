@@ -13,7 +13,7 @@ describe('common', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Musterfrau-Gößinger', 'fnt': 'MUSTERFRAU<GOESSINGER', 'gn': 'Gabriele', 'gnt': 'GABRIELE'}, 'dob': '1998-02-26', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-02-18', 'co': 'AT', 'is': 'BMSGPK Austria', 'ci': 'urn:uvci:01:AT:10807843F94AEE0EE5093FBC254BD813P'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Musterfrau-Gößinger', 'fnt': 'MUSTERFRAU<GOESSINGER', 'gn': 'Gabriele', 'gnt': 'GABRIELE'}, 'dob': '1998-02-26', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-02-18', 'co': 'AT', 'is': 'BMSGPK Austria', 'ci': 'urn:uvci:01:AT:10807843F94AEE0EE5093FBC254BD813P'}]});
   });
 
   it('should verify common_2DCode_raw_CO2', async () => {
@@ -21,7 +21,7 @@ describe('common', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Musterfrau-Gößinger', 'fnt': 'MUSTERFRAU<GOESSINGER', 'gn': 'Gabriele', 'gnt': 'GABRIELE'}, 'dob': '1998-02-26', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-02-18', 'co': 'AT', 'is': 'BMSGPK Austria', 'ci': 'urn:uvci:01:AT:10807843F94AEE0EE5093FBC254BD813P'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Musterfrau-Gößinger', 'fnt': 'MUSTERFRAU<GOESSINGER', 'gn': 'Gabriele', 'gnt': 'GABRIELE'}, 'dob': '1998-02-26', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-02-18', 'co': 'AT', 'is': 'BMSGPK Austria', 'ci': 'urn:uvci:01:AT:10807843F94AEE0EE5093FBC254BD813P'}]});
   });
 
   it('should verify common_2DCode_raw_CO10', async () => {
@@ -48,7 +48,7 @@ describe('common', async () => {
   it('should verify common_2DCode_raw_CO5', async () => {
     const HC1 = 'HC1:NCFTW2ZY93PO/230NAP%3WT2BZS2HU7ZRZ/9X3LEGK9Y5TZ2G4PO-UY6W8J8G3L7*HJI2AACQ9G-GC*90A10LCEPRRPDH98J98J.BUCDU3 EDMM5FU:+3.ZI48NF0TLARJ16+18XVI3US4RTBBDBCJL.V+-TS8T*I2PILZ+32N2YXA750RAKSOHIWOF52LXEK00TTKE*KLBMXMJ R9K-O.8GURFJQN7:AADHPD0SKRRSHFB1.2LX/1HEC5%1EOA%VVO93O%QI%5GNKQB61BBOGFB*U9FTNPL6CJ1%KXX0A.U:RCPUJ0$P3%R*093.KFCDD.Q968%DPUBSYS8-+MR.1B$RVWV-.VM/JQ249*H76U F49DUT3PLJA+:M98UG8V4HJ9XS. K6LBJ5N19IHX1+SAR.R$UP8:BTOKAXPMXEFI1JG53X8 P6QAOV5WEB5%:7Z*TQ5';
     const cwtPayload = await unpackAndVerify(HC1);
-    expect(cwtPayload).to.be.undefined;
+    expect(cwtPayload.status).to.be.eql("invalid_signature");
   });
 
   it('should verify common_2DCode_raw_CO17', async () => {
@@ -96,7 +96,7 @@ describe('common', async () => {
   it('should verify common_2DCode_raw_CO23', async () => {
     const HC1 = 'HC1:NCF8%A*-NXP3I407FCNBHNL84F42G12-IGMNEMN21RY.NFVM47F$FR2RGUG04+PJ1U FTL6QK-B EFLYLMP4QYG$HI$K1Q7BV21M5JIX5I*VVGD36PQPPGNH6NRBR98P2V:BMUHVIMJ*FU.ANJDK3A75DY3OLNV$AR.EWQ-VUTKEZOG+DN4SV*LWLLR4BQ:KZ50 V1GN1MI8GZJLMT0BF-U668GM-2D209GHEE9O:H:TDP 47P9W54+A16TLR+9*.SD BRIA 1M:E0AKTADI:T2UIM8HJUA7VLSDAH.5H+4LL10YLVJGP5BEX*16IFFEEK7LUJRBNNFOD/UN7T3EFRDDMOIUYEHTS5CBI*XGR7N9MNPKUIUI UJW.IN82 96UJJXI5620$KI-ROJVG%20HMH0IL7OBR%C3MT.ETP3IV4F*%QY%TFD3IQA2:2Z2JWKDWTGK1JZI6938KP7/*P3G6ZQCGH27V58K2N.QOIMS-V899WZ2F:TKNPR366%0TIJYU0OYRK7GWHS1E6QFUB:VFTD.-S49IJ8J7-RFWMCWJPRJ/6M/EU8AF3DV 9VRKUG:Q97FZOLF-VTSTNYT3FVUP9/Z55-T*9RC/0:/MJUKZ GM2GHOI38J';
     const cwtPayload = await unpackAndVerify(HC1);
-    expect(cwtPayload).to.be.undefined;
+    expect(cwtPayload.status).to.be.eql("invalid_signature");
   });
 
   it('should verify common_2DCode_raw_CO19', async () => {
@@ -153,7 +153,7 @@ describe('common', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Musterfrau-Gößinger', 'fnt': 'MUSTERFRAU<GOESSINGER', 'gn': 'Gabriele', 'gnt': 'GABRIELE'}, 'dob': '1998-02-26', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-02-18', 'co': 'AT', 'is': 'BMSGPK Austria', 'ci': 'urn:uvci:01:AT:10807843F94AEE0EE5093FBC254BD813P'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Musterfrau-Gößinger', 'fnt': 'MUSTERFRAU<GOESSINGER', 'gn': 'Gabriele', 'gnt': 'GABRIELE'}, 'dob': '1998-02-26', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-02-18', 'co': 'AT', 'is': 'BMSGPK Austria', 'ci': 'urn:uvci:01:AT:10807843F94AEE0EE5093FBC254BD813P'}]});
   });
 
   it('should verify common_2DCode_raw_CO12', async () => {

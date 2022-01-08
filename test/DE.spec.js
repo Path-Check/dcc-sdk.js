@@ -6,7 +6,7 @@ describe('DE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '1964-08-12', 'nam': {'fn': 'Mustermann', 'fnt': 'MUSTERMANN', 'gn': 'Erika', 'gnt': 'ERIKA'}, 'v': [{'ci': 'URN:UVCI:01DE/IZ12345A/5CWLU12RNOB9RXSEOP6FG8#W', 'co': 'DE', 'dn': 2, 'dt': '2021-05-29', 'is': 'Robert Koch-Institut', 'ma': 'ORG-100031184', 'mp': 'EU/1/20/1507', 'sd': 2, 'tg': '840539006', 'vp': '1119349007'}], 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'dob': '1964-08-12', 'nam': {'fn': 'Mustermann', 'fnt': 'MUSTERMANN', 'gn': 'Erika', 'gnt': 'ERIKA'}, 'v': [{'ci': 'URN:UVCI:01DE/IZ12345A/5CWLU12RNOB9RXSEOP6FG8#W', 'co': 'DE', 'dn': 2, 'dt': '2021-05-29', 'is': 'Robert Koch-Institut', 'ma': 'ORG-100031184', 'mp': 'EU/1/20/1507', 'sd': 2, 'tg': '840539006', 'vp': '1119349007'}], 'ver': '1.0.0'});
   });
 
   it('should verify DE_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('DE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '1964-08-12', 'nam': {'fn': 'Mustermann', 'fnt': 'MUSTERMANN', 'gn': 'Erika', 'gnt': 'ERIKA'}, 't': [{'ci': 'URN:UVCI:01DE/IZ12345A/5CWLU12RNOB9RXSEOP6FG8#W', 'co': 'DE', 'dr': '2021-05-30T10:30:15Z', 'is': 'Robert Koch-Institut', 'sc': '2021-05-30T10:12:22Z', 'tc': 'Testzentrum Köln Hbf', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP217198-3'}], 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'dob': '1964-08-12', 'nam': {'fn': 'Mustermann', 'fnt': 'MUSTERMANN', 'gn': 'Erika', 'gnt': 'ERIKA'}, 't': [{'ci': 'URN:UVCI:01DE/IZ12345A/5CWLU12RNOB9RXSEOP6FG8#W', 'co': 'DE', 'dr': '2021-05-30T10:30:15Z', 'is': 'Robert Koch-Institut', 'sc': '2021-05-30T10:12:22Z', 'tc': 'Testzentrum Köln Hbf', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP217198-3'}], 'ver': '1.0.0'});
   });
 
   it('should verify DE_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('DE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '1964-08-12', 'nam': {'fn': 'Mustermann', 'fnt': 'MUSTERMANN', 'gn': 'Erika', 'gnt': 'ERIKA'}, 'r': [{'ci': 'URN:UVCI:01DE/5CWLU12RNOB9RXSEOP6FG8#W', 'co': 'DE', 'df': '2021-05-29', 'du': '2021-06-15', 'fr': '2021-01-10', 'is': 'Robert Koch-Institut', 'tg': '840539006'}], 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'dob': '1964-08-12', 'nam': {'fn': 'Mustermann', 'fnt': 'MUSTERMANN', 'gn': 'Erika', 'gnt': 'ERIKA'}, 'r': [{'ci': 'URN:UVCI:01DE/5CWLU12RNOB9RXSEOP6FG8#W', 'co': 'DE', 'df': '2021-05-29', 'du': '2021-06-15', 'fr': '2021-01-10', 'is': 'Robert Koch-Institut', 'tg': '840539006'}], 'ver': '1.0.0'});
   });
 
   it('should verify DE_2DCode_raw_4', async () => {
@@ -30,7 +30,7 @@ describe('DE', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '1964-08-12', 'nam': {'fn': 'Mustermann', 'fnt': 'MUSTERMANN', 'gn': 'Erika', 'gnt': 'ERIKA'}, 'v': [{'ci': 'URN:UVCI:01DE/IZ12345A/5CWLU12RNOB9RXSEOP6FG8#W', 'co': 'DE', 'dn': 1, 'dt': '2021-05-29', 'is': 'Robert Koch-Institut', 'ma': 'ORG-100031184', 'mp': 'EU/1/20/1507', 'sd': 2, 'tg': '840539006', 'vp': '1119349007'}], 'ver': '1.0.0'});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'dob': '1964-08-12', 'nam': {'fn': 'Mustermann', 'fnt': 'MUSTERMANN', 'gn': 'Erika', 'gnt': 'ERIKA'}, 'v': [{'ci': 'URN:UVCI:01DE/IZ12345A/5CWLU12RNOB9RXSEOP6FG8#W', 'co': 'DE', 'dn': 1, 'dt': '2021-05-29', 'is': 'Robert Koch-Institut', 'ma': 'ORG-100031184', 'mp': 'EU/1/20/1507', 'sd': 2, 'tg': '840539006', 'vp': '1119349007'}], 'ver': '1.0.0'});
   });
 
 });

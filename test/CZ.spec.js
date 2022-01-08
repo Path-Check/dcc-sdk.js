@@ -6,7 +6,7 @@ describe('CZ', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '1979-05-06', 'nam': {'fn': 'Daňhelka', 'fnt': 'DANHELKA', 'gn': 'Miroslav', 'gnt': 'MIROSLAV'}, 'v': [{'ci': 'URN:UVCI:01:CZ:6FHKN4275XT78AKVS7BH62EGW339ZNYS', 'co': 'CZ', 'dn': 2, 'dt': '2021-02-25', 'is': 'Ministry of Health of the Czech Republic', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': '1119349007'}], 'ver': '1.0.1'});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'dob': '1979-05-06', 'nam': {'fn': 'Daňhelka', 'fnt': 'DANHELKA', 'gn': 'Miroslav', 'gnt': 'MIROSLAV'}, 'v': [{'ci': 'URN:UVCI:01:CZ:6FHKN4275XT78AKVS7BH62EGW339ZNYS', 'co': 'CZ', 'dn': 2, 'dt': '2021-02-25', 'is': 'Ministry of Health of the Czech Republic', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': '1119349007'}], 'ver': '1.0.1'});
   });
 
   it('should verify CZ_2DCode_raw_2', async () => {
@@ -14,7 +14,7 @@ describe('CZ', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '2000-11-19', 'nam': {'fn': 'Novák', 'fnt': 'NOVAK', 'gn': 'Jan', 'gnt': 'JAN'}, 'r': [{'ci': 'URN:UVCI:01:CZ:F8Y624ZP8VA5ZJSZCW652M4XXTF4BQDZ', 'co': 'CZ', 'df': '2021-05-15', 'du': '2021-11-15', 'fr': '2021-05-01', 'is': 'Ministry of Health of the Czech Republic', 'tg': '840539006'}], 'ver': '1.0.1'});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'dob': '2000-11-19', 'nam': {'fn': 'Novák', 'fnt': 'NOVAK', 'gn': 'Jan', 'gnt': 'JAN'}, 'r': [{'ci': 'URN:UVCI:01:CZ:F8Y624ZP8VA5ZJSZCW652M4XXTF4BQDZ', 'co': 'CZ', 'df': '2021-05-15', 'du': '2021-11-15', 'fr': '2021-05-01', 'is': 'Ministry of Health of the Czech Republic', 'tg': '840539006'}], 'ver': '1.0.1'});
   });
 
   it('should verify CZ_2DCode_raw_3', async () => {
@@ -22,7 +22,7 @@ describe('CZ', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '1953-03-19', 'nam': {'fn': 'Věrohodný', 'fnt': 'VEROHODNY', 'gn': 'Břetislav', 'gnt': 'BRETISLAV'}, 't': [{'ci': 'URN:UVCI:01:CZ:EPSZDWHTRF82JTS8M6XU77XDBECFFPVY', 'co': 'CZ', 'dr': '2021-06-06T00:00:00+02:00', 'is': 'Ministry of Health of the Czech Republic', 'sc': '2021-06-06T23:59:59+02:00', 'tc': 'Pardubická krajská nemocnice a.s. odd. mikrobiolog', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'ver': '1.0.1'});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'dob': '1953-03-19', 'nam': {'fn': 'Věrohodný', 'fnt': 'VEROHODNY', 'gn': 'Břetislav', 'gnt': 'BRETISLAV'}, 't': [{'ci': 'URN:UVCI:01:CZ:EPSZDWHTRF82JTS8M6XU77XDBECFFPVY', 'co': 'CZ', 'dr': '2021-06-06T00:00:00+02:00', 'is': 'Ministry of Health of the Czech Republic', 'sc': '2021-06-06T23:59:59+02:00', 'tc': 'Pardubická krajská nemocnice a.s. odd. mikrobiolog', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP6464-4'}], 'ver': '1.0.1'});
   });
 
   it('should verify CZ_2DCode_raw_4', async () => {
@@ -30,7 +30,7 @@ describe('CZ', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '2000-11-19', 'nam': {'fn': 'Novák', 'fnt': 'NOVAK', 'gn': 'Jan', 'gnt': 'JAN'}, 't': [{'ci': 'URN:UVCI:01:CZ:4TYR4S7MW5SCBWCSM4R7UH3RRF2G5HWF', 'co': 'CZ', 'is': 'Ministry of Health of the Czech Republic', 'ma': '1242', 'sc': '2021-06-07T00:59:59+02:00', 'tc': 'MUDr. Jana Vedrová, s.r.o. - 000 - Havířov, Studen', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP217198-3'}], 'ver': '1.0.1'});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'dob': '2000-11-19', 'nam': {'fn': 'Novák', 'fnt': 'NOVAK', 'gn': 'Jan', 'gnt': 'JAN'}, 't': [{'ci': 'URN:UVCI:01:CZ:4TYR4S7MW5SCBWCSM4R7UH3RRF2G5HWF', 'co': 'CZ', 'is': 'Ministry of Health of the Czech Republic', 'ma': '1242', 'sc': '2021-06-07T00:59:59+02:00', 'tc': 'MUDr. Jana Vedrová, s.r.o. - 000 - Havířov, Studen', 'tg': '840539006', 'tr': '260415000', 'tt': 'LP217198-3'}], 'ver': '1.0.1'});
   });
 
   it('should verify CZ_2DCode_raw_5', async () => {
@@ -38,7 +38,7 @@ describe('CZ', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'dob': '2000-11-19', 'nam': {'fn': 'Novák', 'fnt': 'NOVAK', 'gn': 'Jan', 'gnt': 'JAN'}, 'v': [{'ci': 'URN:UVCI:01:CZ:MKTP5HRWY2RTYQG5BZY737M97APTHMN5', 'co': 'CZ', 'dn': 1, 'dt': '2021-05-11', 'is': 'Ministry of Health of the Czech Republic', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': '1119349007'}], 'ver': '1.0.1'});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'dob': '2000-11-19', 'nam': {'fn': 'Novák', 'fnt': 'NOVAK', 'gn': 'Jan', 'gnt': 'JAN'}, 'v': [{'ci': 'URN:UVCI:01:CZ:MKTP5HRWY2RTYQG5BZY737M97APTHMN5', 'co': 'CZ', 'dn': 1, 'dt': '2021-05-11', 'is': 'Ministry of Health of the Czech Republic', 'ma': 'ORG-100030215', 'mp': 'EU/1/20/1528', 'sd': 2, 'tg': '840539006', 'vp': '1119349007'}], 'ver': '1.0.1'});
   });
 
 });

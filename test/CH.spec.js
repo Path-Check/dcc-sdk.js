@@ -6,7 +6,7 @@ describe('CH', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'nam': {'fn': 'Müller', 'fnt': 'MUELLER', 'gn': 'Céline', 'gnt': 'CELINE'}, 'dob': '1943-02-01', 'ver': '1.0.0', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1507', 'ma': 'ORG-100031184', 'dn': 2, 'sd': 2, 'dt': '2021-04-30', 'co': 'CH', 'is': 'Bundesamt für Gesundheit (BAG)', 'ci': 'urn:uvci:01:CH:2987CC9617DD5593806D4285'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'nam': {'fn': 'Müller', 'fnt': 'MUELLER', 'gn': 'Céline', 'gnt': 'CELINE'}, 'dob': '1943-02-01', 'ver': '1.0.0', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1507', 'ma': 'ORG-100031184', 'dn': 2, 'sd': 2, 'dt': '2021-04-30', 'co': 'CH', 'is': 'Bundesamt für Gesundheit (BAG)', 'ci': 'urn:uvci:01:CH:2987CC9617DD5593806D4285'}]});
   });
 
   it('should verify CH_2DCode_raw_3', async () => {
@@ -14,7 +14,7 @@ describe('CH', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'nam': {'fn': 'Müller', 'fnt': 'MUELLER', 'gn': 'Céline', 'gnt': 'CELINE'}, 'dob': '1943-02-01', 'ver': '1.0.0', 'r': [{'tg': '840539006', 'fr': '2021-05-28', 'co': 'CH', 'df': '2021-06-07', 'du': '2021-11-24', 'is': 'Bundesamt für Gesundheit (BAG)', 'ci': 'urn:uvci:01:CH:16C655A5C5A504F8433B45C9'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'nam': {'fn': 'Müller', 'fnt': 'MUELLER', 'gn': 'Céline', 'gnt': 'CELINE'}, 'dob': '1943-02-01', 'ver': '1.0.0', 'r': [{'tg': '840539006', 'fr': '2021-05-28', 'co': 'CH', 'df': '2021-06-07', 'du': '2021-11-24', 'is': 'Bundesamt für Gesundheit (BAG)', 'ci': 'urn:uvci:01:CH:16C655A5C5A504F8433B45C9'}]});
   });
 
 });

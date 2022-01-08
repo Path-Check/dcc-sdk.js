@@ -6,7 +6,7 @@ describe('SK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Michal', 'gn': 'Piško', 'fnt': 'MICHAL', 'gnt': 'PISKO'}, 'dob': '1999-12-24', 'r': [{'tg': '840539006', 'fr': '2021-04-21', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'df': '2021-05-19', 'du': '2021-10-21', 'ci': 'urn:uvci:01:SK:A7C71100B145444B827299717EB2FFAE'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Michal', 'gn': 'Piško', 'fnt': 'MICHAL', 'gnt': 'PISKO'}, 'dob': '1999-12-24', 'r': [{'tg': '840539006', 'fr': '2021-04-21', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'df': '2021-05-19', 'du': '2021-10-21', 'ci': 'urn:uvci:01:SK:A7C71100B145444B827299717EB2FFAE'}]});
   });
 
   it('should verify SK_2DCode_raw_7', async () => {
@@ -14,7 +14,7 @@ describe('SK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Nemohúca', 'gn': 'Vladimíra', 'fnt': 'NEMOHUCA', 'gnt': 'VLADIMIRA'}, 'dob': '1938-07-26', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'tr': '260415000', 'ma': '1242', 'sc': '2021-05-20T15:21:41+00:00', 'dr': '2021-05-20T15:36:31+00:00', 'tc': 'SWOT Levice', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:C1B1F5587377412FA2C65621023AE9D4'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Nemohúca', 'gn': 'Vladimíra', 'fnt': 'NEMOHUCA', 'gnt': 'VLADIMIRA'}, 'dob': '1938-07-26', 't': [{'tg': '840539006', 'tt': 'LP217198-3', 'tr': '260415000', 'ma': '1242', 'sc': '2021-05-20T15:21:41+00:00', 'dr': '2021-05-20T15:36:31+00:00', 'tc': 'SWOT Levice', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:C1B1F5587377412FA2C65621023AE9D4'}]});
   });
 
   it('should verify SK_2DCode_raw_1', async () => {
@@ -22,7 +22,7 @@ describe('SK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Šimon', 'gn': 'Petrovič Lužičinský', 'fnt': 'SIMON', 'gnt': 'PETROVIC<LUZICINSKY'}, 'dob': '1990-01-01', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-05-14', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:C0DA0FF1D1EE4643A81F953778520E0A'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Šimon', 'gn': 'Petrovič Lužičinský', 'fnt': 'SIMON', 'gnt': 'PETROVIC<LUZICINSKY'}, 'dob': '1990-01-01', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-05-14', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:C0DA0FF1D1EE4643A81F953778520E0A'}]});
   });
 
   it('should verify SK_2DCode_raw_2', async () => {
@@ -30,7 +30,7 @@ describe('SK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Sčasný', 'gn': 'Svätozár', 'fnt': 'SCASNY', 'gnt': 'SVAETOZAR'}, 'dob': '1984-09-27', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-05-18', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:4DC1082B01524B868C87BE23345B3587'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Sčasný', 'gn': 'Svätozár', 'fnt': 'SCASNY', 'gnt': 'SVAETOZAR'}, 'dob': '1984-09-27', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-05-18', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:4DC1082B01524B868C87BE23345B3587'}]});
   });
 
   it('should verify SK_2DCode_raw_3', async () => {
@@ -38,7 +38,7 @@ describe('SK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Prism', 'gn': 'Róbert', 'fnt': 'PRISM', 'gnt': 'ROBERT'}, 'dob': '1955-04-21', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/21/1529', 'ma': 'ORG-100001699', 'dn': 1, 'sd': 2, 'dt': '2021-03-30', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:AD49A022B66F43189238DC38B78D8027'}, {'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/21/1529', 'ma': 'ORG-100001699', 'dn': 2, 'sd': 2, 'dt': '2021-05-19', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:AD49A022B66F43189238DC38B78D8027'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Prism', 'gn': 'Róbert', 'fnt': 'PRISM', 'gnt': 'ROBERT'}, 'dob': '1955-04-21', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/21/1529', 'ma': 'ORG-100001699', 'dn': 1, 'sd': 2, 'dt': '2021-03-30', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:AD49A022B66F43189238DC38B78D8027'}, {'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/21/1529', 'ma': 'ORG-100001699', 'dn': 2, 'sd': 2, 'dt': '2021-05-19', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:AD49A022B66F43189238DC38B78D8027'}]});
   });
 
   it('should verify SK_2DCode_raw_8', async () => {
@@ -46,7 +46,7 @@ describe('SK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Skywalkerová', 'gn': 'Nina', 'fnt': 'SKYWALKEROVA', 'gnt': 'NINA'}, 'dob': '1978-05-21', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'tr': '260415000', 'sc': '2021-05-20T12:34:56+00:00', 'dr': '2021-05-20T12:45:01+00:00', 'tc': 'Poliklinika Mýtna', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:E2FA2860F180475B99CFD15745AC12E4'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Skywalkerová', 'gn': 'Nina', 'fnt': 'SKYWALKEROVA', 'gnt': 'NINA'}, 'dob': '1978-05-21', 't': [{'tg': '840539006', 'tt': 'LP6464-4', 'tr': '260415000', 'sc': '2021-05-20T12:34:56+00:00', 'dr': '2021-05-20T12:45:01+00:00', 'tc': 'Poliklinika Mýtna', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:E2FA2860F180475B99CFD15745AC12E4'}]});
   });
 
   it('should verify SK_2DCode_raw_4', async () => {
@@ -54,7 +54,7 @@ describe('SK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Poľnohospodárska', 'gn': 'Petronela', 'fnt': 'POLNOHOSPODARSKA', 'gnt': 'PETRONELA'}, 'dob': '1991-06-09', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1507', 'ma': 'ORG-100031184', 'dn': 2, 'sd': 2, 'dt': '2021-06-07', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:4DF6D90D57AB46FF830CB1874B477101'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Poľnohospodárska', 'gn': 'Petronela', 'fnt': 'POLNOHOSPODARSKA', 'gnt': 'PETRONELA'}, 'dob': '1991-06-09', 'v': [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1507', 'ma': 'ORG-100031184', 'dn': 2, 'sd': 2, 'dt': '2021-06-07', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:4DF6D90D57AB46FF830CB1874B477101'}]});
   });
 
   it('should verify SK_2DCode_raw_5', async () => {
@@ -62,7 +62,7 @@ describe('SK', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload.credential)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Orbandyová Igorovičová', 'gn': 'Viktória', 'fnt': 'ORBANDYOVA<IGOROVICOVA', 'gnt': 'VIKTORIA'}, 'dob': '1980-12-31', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1525', 'ma': 'ORG-100001417', 'dn': 1, 'sd': 1, 'dt': '2021-05-20', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:D927CA0E205E44678CE3C5E7E14159CA'}]});
+    expect(await parseCWT(cwtPayload.contents)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Orbandyová Igorovičová', 'gn': 'Viktória', 'fnt': 'ORBANDYOVA<IGOROVICOVA', 'gnt': 'VIKTORIA'}, 'dob': '1980-12-31', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1525', 'ma': 'ORG-100001417', 'dn': 1, 'sd': 1, 'dt': '2021-05-20', 'co': 'SK', 'is': 'National Health Information Center, Slovakia', 'ci': 'urn:uvci:01:SK:D927CA0E205E44678CE3C5E7E14159CA'}]});
   });
 
 });
